@@ -70,4 +70,7 @@
         <item>"wifi_mms,46,1,2,180000,true"</item>
         <item>"wifi_xcap,47,1,2,60000,true"</item>
     </string-array>
+
+    <!-- Is the notification LED intrusive? Used to decide if there should be a disable option -->
+    <bool name="config_intrusiveNotificationLed">true</bool>
 </resources>
