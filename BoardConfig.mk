@@ -31,6 +31,9 @@ TARGET_NO_BOOTLOADER := true
 # Board Platform
 TARGET_BOARD_PLATFORM := hi3660
 
+# Build flags
+BUILD_BROKEN_USES_BUILD_COPY_HEADERS := true
+
 # Init
 TARGET_INIT_VENDOR_LIB := //$(DEVICE_PATH)/resources:init_hisi
 TARGET_RECOVERY_DEVICE_MODULES := init_hisi
