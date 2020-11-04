@@ -383,8 +383,10 @@ on post-fs
     chmod 0660 /proc/uid_iostats/remove_uid_list
     
 on post-fs-data
-   mkdir /data/vendor/log/sec_storage_data 0775 system system
-   mkdir /data/vendor/log/sec_storage_data/log 0755 system system
+    setprop init.svc.console stopped
+   
+    mkdir /data/vendor/log/sec_storage_data 0775 system system
+    mkdir /data/vendor/log/sec_storage_data/log 0755 system system
 
     chmod 0660 /dev/smartpakit
     chown media media /dev/smartpakit
