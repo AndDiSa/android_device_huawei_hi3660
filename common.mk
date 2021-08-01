@@ -65,6 +65,7 @@ PRODUCT_PACKAGES += \
     android.hardware.bluetooth@1.0-service
 
 # Bootanimation
+TARGET_BOOTANIMATION_HALF_RES := true
 TARGET_SCREEN_HEIGHT := 2560
 TARGET_SCREEN_WIDTH := 1600
 
