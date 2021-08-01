@@ -66,6 +66,7 @@ vendor.powerhal.disp.idle_support=false
 
 # Recovery
 persist.vendor.recovery_update=true
+ro.recovery.ui.blank_unblank_on_init=true
 
 # SurfaceFlinger
 debug.sf.latch_unsignaled=1
