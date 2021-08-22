@@ -293,6 +293,9 @@ PRODUCT_SOONG_NAMESPACES += \
     hardware/google/pixel \
     $(LOCAL_PATH)/resources
 
+# Speed profile services and wifi-service to reduce RAM and storage
+PRODUCT_SYSTEM_SERVER_COMPILER_FILTER := speed-profile
+
 # Tee
 PRODUCT_PACKAGES += \
     vendor.huawei.hardware.libteec@2.0 \
