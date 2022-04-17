@@ -265,6 +265,9 @@ PRODUCT_COPY_FILES += \
 PRODUCT_PACKAGES += \
     android.hardware.power-service.pixel-libperfmgr
 
+PRODUCT_PACKAGES += \
+    libshim_audioparams
+
 PRODUCT_COPY_FILES += \
     $(LOCAL_PATH)/prebuilts/powerhint.json:$(TARGET_COPY_OUT_VENDOR)/etc/powerhint.json
 

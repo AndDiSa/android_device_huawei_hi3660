@@ -58,6 +58,8 @@ function blob_fixup() {
     case "${1}" in
         vendor/lib64/hw/audio.primary_hisi.hi3660.so)
             "${PATCHELF}" --add-needed "libprocessgroup.so" "${2}"
+            "${PATCHELF}" --add-needed "libshim_audioparams.so" "${2}"
+            sed -i 's/str_parms_get_str/str_parms_get_mod/g' "${2}"
             ;;
         vendor/lib*/hw/gralloc.hi3660.so)
             "${PATCHELF}" --add-needed "libhidlbase.so" "${2}"
