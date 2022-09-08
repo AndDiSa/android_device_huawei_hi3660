@@ -1,2 +1,4 @@
+typeattribute system_block_device super_block_device_type;
+
 # TEE
 type teecd_device, dev_type;
