@@ -57,6 +57,9 @@ ro.hardware.gps=hi1102
 vendor.debug.config.mmu_en=1
 persist.vendor.smart_pool=1
 
+# Graphics
+ro.hwui.render_ahead=20
+
 # Media
 debug.stagefright.ccodec=0
 media.stagefright.thumbnail.prefer_hw_codecs=true
