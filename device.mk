@@ -38,6 +38,7 @@ PRODUCT_PACKAGES += \
 
 PRODUCT_PACKAGES += \
     libstdc++.vendor \
+    libui-v28 \
     libion
     
 # Hisi init
