@@ -42,7 +42,7 @@
     <value>10.0</value>
   </array>
   <array name="cpu.clusters.cores">
-        <value>4</value>
+        <value>8</value>
   </array>
   <array name="cpu.core_speeds.cluster0">
     <value>533000</value> <!-- 533 MHz CPU speed -->
