@@ -44,5 +44,7 @@ BOARD_KERNEL_IMAGE_NAME := Image.gz
 TARGET_KERNEL_SOURCE := kernel/huawei/hi3660
 TARGET_KERNEL_CONFIG := hisi3660_defconfig
 
+TARGET_KERNEL_LLVM_BINUTILS := false
+
 # Properties
 TARGET_VENDOR_PROP += $(DEVICE_PATH)/vendor.prop
