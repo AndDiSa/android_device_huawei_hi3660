@@ -48,6 +48,9 @@ ro.fastbootd.available=true
 vendor.debug.config.mmu_en=1
 persist.vendor.smart_pool=1
 
+# Media
+debug.stagefright.ccodec=0
+
 # SurfaceFlinger
 debug.sf.latch_unsignaled=1
 debug.sf.enable_gl_backpressure=1
