@@ -356,11 +356,6 @@ on fs
 
     mkdir /splash2/log 0775 system log
     
-    mkdir /data/sec_storage_data 0700 system system
-    restorecon /data/sec_storage_data
-    mkdir /data/sec_storage_data_users 0700 system system
-    restorecon /data/sec_storage_data_users
-    
     restorecon /sys/class/graphics/fb0/lcd_cabc_mode
     restorecon /sys/class/leds/torch/flash_thermal_protect
     
@@ -385,8 +380,20 @@ on post-fs
 on post-fs-data
     setprop init.svc.console stopped
    
+    mkdir /data/sec_storage_data 0700 system system encryption=None
+    restorecon /data/sec_storage_data
+    
+    mkdir /data/sec_storage_data_users 0700 system system encryption=None
+    restorecon /data/sec_storage_data_users
+    
     mkdir /data/vendor/log/sec_storage_data 0775 system system
     mkdir /data/vendor/log/sec_storage_data/log 0755 system system
+
+    mkdir /data/vendor/sec_storage_data 0700 system system
+    restorecon /data/vendor/sec_storage_data
+
+    mkdir /data/vendor/sec_storage_data_users 0700 system system
+    restorecon /data/vendor/sec_storage_data_users
 
     chmod 0660 /dev/smartpakit
     chown media media /dev/smartpakit
