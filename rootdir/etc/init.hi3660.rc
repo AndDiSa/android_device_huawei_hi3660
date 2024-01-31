@@ -347,7 +347,7 @@ on early-fs
     start oeminfo_nvm
 
 on fs
-    mount_all /vendor/etc/fstab.hi3660
+    mount_all /vendor/etc/fstab.hi3660 --early
 
     restorecon /splash2
     chmod 775 /splash2
@@ -363,6 +363,10 @@ on fs
     
     restorecon /sys/class/graphics/fb0/lcd_cabc_mode
     restorecon /sys/class/leds/torch/flash_thermal_protect
+    
+on late-fs
+    # Mount RW partitions which need run fsck
+    mount_all /vendor/etc/fstab.hi3660 --late
     
 on post-fs
     # set RLIMIT_MEMLOCK to 64MB
@@ -604,7 +608,6 @@ on early-boot
 
     # for CTS Bugfix
     write /dev/pmsg0 1
-
 on boot
     start hisecd
     
