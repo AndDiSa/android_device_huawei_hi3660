@@ -1463,6 +1463,13 @@ service vendor.hwcomposer-2-2 /vendor/bin/hw/android.hardware.graphics.composer@
     onrestart restart surfaceflinger
     task_profiles HighPerformance
     
+service vendor.keymaster-3-0 /vendor/bin/hw/android.hardware.keymaster@3.0-service
+    override
+    interface android.hardware.keymaster@3.0::IKeymasterDevice default
+    class early_hal
+    user system
+    group system drmrpc
+    
 on property:ro.build.type=eng
     mkdir /data/vendor/hwcdump 0755 system system
     restorecon_recursive /data/vendor/hwcdump
