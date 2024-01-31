@@ -349,12 +349,7 @@ on early-fs
 on fs
     mount_all /vendor/etc/fstab.hi3660 --early
 
-    restorecon /splash2
-    chmod 775 /splash2
-    chown root system /splash2
-
     mkdir /splash2/log 0775 system log
-    symlink /splash2 /log
     
     mkdir /data/sec_storage_data 0700 system system
     restorecon /data/sec_storage_data

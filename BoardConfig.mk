@@ -76,6 +76,15 @@ TARGET_RECOVERY_FSTAB := $(DEVICE_PATH)/rootdir/fstab.hi3660
 TARGET_RECOVERY_PIXEL_FORMAT := "BGRA_8888"
 BOARD_USES_FULL_RECOVERY_IMAGE := true
 
+# Root
+BOARD_ROOT_EXTRA_FOLDERS += \
+    3rdmodem \
+    3rdmodemnvm \
+    3rdmodemnvmbkp \
+    modem_log \
+    sec_storage \
+    splash2
+
 # SEPolicy
 SELINUX_IGNORE_NEVERALLOWS := true
 BOARD_VENDOR_SEPOLICY_DIRS += $(DEVICE_PATH)/sepolicy/vendor
