@@ -78,18 +78,13 @@ PRODUCT_PACKAGES += \
     android.hardware.graphics.composer@2.2-service \
     android.hardware.graphics.mapper@2.0-impl
 
-PRODUCT_PACKAGES += \
-    libstdc++.vendor \
-    libui-v28 \
-    libion
-    
 # Gatekeeper
 PRODUCT_PACKAGES += \
     android.hardware.gatekeeper@1.0-service \
     android.hardware.gatekeeper@1.0-impl
     
 # Health
-PRODUCT_PACKAGES += \  
+PRODUCT_PACKAGES += \
     android.hardware.health@2.1-impl \
     android.hardware.health@2.1-impl.recovery \
     android.hardware.health@2.1-service
@@ -118,6 +113,12 @@ PRODUCT_COPY_FILES += \
     frameworks/av/media/libstagefright/data/media_codecs_google_video.xml:$(TARGET_COPY_OUT_VENDOR)/etc/media_codecs_google_video.xml
     
 # Misc
+PRODUCT_PACKAGES += \
+    libprotobuf-cpp-lite-v29 \
+    libstdc++.vendor \
+    libui-v28 \
+    libion
+
 PRODUCT_PACKAGES += \
     libiawareperf_client \
     libperfgenius_vendor_client
