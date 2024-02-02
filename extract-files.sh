@@ -74,6 +74,9 @@ function blob_fixup() {
         vendor/bin/hw_charger)
             sed -i 's|/system/etc/%s.png|/vendor/etc/%s.png|g' "${2}"
             ;;
+        vendor/lib*/libril-hisi.so)
+            "${PATCHELF}" --set-soname "libril-hisi.so" "${2}"
+            ;;
     esac
 }
 
