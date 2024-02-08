@@ -229,7 +229,9 @@ vendor/lib64/vendor.huawei.hardware.hwdisplay.displayengine@1.2.so
 vendor/lib64/vendor.huawei.hardware.hwdisplay@1.0.so
 
 # Keystore
+vendor/lib/hw/android.hardware.keymaster@3.0-impl.so:vendor/lib/hw/android.hardware.keymaster@3.0-impl-hisi.so
 vendor/lib/hw/keystore.hi3660.so
+vendor/lib64/hw/android.hardware.keymaster@3.0-impl.so:vendor/lib64/hw/android.hardware.keymaster@3.0-impl-hisi.so
 vendor/lib64/hw/keystore.hi3660.so
 
 # Media OMX
