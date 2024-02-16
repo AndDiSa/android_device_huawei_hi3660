@@ -18,7 +18,7 @@
 /dev/block/by-name/cache         			/cache                ext4      rw,nosuid,nodev,noatime,data=ordered wait,check
 /dev/block/by-name/misc       				/misc       emmc      defaults        defaults
 
-/dev/block/zram0             				none         swap    defaults     zramsize=536870912
+/dev/block/zram0             				none         swap    defaults     zramsize=50%
 
 /dev/block/by-name/kernel              			/boot          emmc    defaults        recoveryonly
 /dev/block/by-name/recovery_ramdisk    			/recovery      emmc    defaults        recoveryonly
