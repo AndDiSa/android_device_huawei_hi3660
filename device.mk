@@ -101,6 +101,11 @@ PRODUCT_ENFORCE_VINTF_MANIFEST_OVERRIDE := true
 PRODUCT_PACKAGES += \
     android.hardware.keymaster@3.0-impl \
     android.hardware.keymaster@3.0-service
+
+PRODUCT_PACKAGES += \
+    libkeymaster3device \
+    libkeystore-engine-wifi-hidl \
+    libkeystore-wifi-hidl
     
 # Light
 PRODUCT_PACKAGES += \

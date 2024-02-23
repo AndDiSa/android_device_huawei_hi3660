@@ -228,6 +228,10 @@ odm/etc/firmware/ts/schubert_parade_SCHU31180_toptouch_tianma_limits.csv
 odm/etc/firmware/ts/schubert_parade_SCHU31180_toptouch_truly.bin
 odm/etc/firmware/ts/schubert_parade_SCHU31180_toptouch_truly_limits.csv
 
+# Keystore
+vendor/lib/hw/keystore.hi3660.so
+vendor/lib64/hw/keystore.hi3660.so
+
 # Media
 vendor/lib/libOMX.hisi.video.decoder.secure.so
 vendor/lib/libOMX.hisi.video.decoder.so
