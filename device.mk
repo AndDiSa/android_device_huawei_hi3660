@@ -232,6 +232,11 @@ PRODUCT_SOONG_NAMESPACES += \
     $(LOCAL_PATH)/resources \
     $(LOCAL_PATH)/resources/power-libperfmgr
     
+# Tee
+PRODUCT_PACKAGES += \
+    vendor.huawei.hardware.libteec@2.0 \
+    vendor.huawei.hardware.libteec@2.0.vendor
+    
 # Trust HAL
 PRODUCT_PACKAGES += \
     vendor.lineage.trust@1.0-service
