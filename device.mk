@@ -60,6 +60,10 @@ PRODUCT_PACKAGES += \
     libhwbinder.vendor \
     libhwbinder
     
+# Biometrics
+PRODUCT_PACKAGES += \
+    vendor.huawei.hardware.biometrics.fingerprint@2.1.vendor
+    
 # DRM
 PRODUCT_PACKAGES += \
     android.hardware.drm-service.clearkey \
@@ -137,6 +141,9 @@ PRODUCT_PACKAGES += \
     
 PRODUCT_PACKAGES += \
     vendor.huawei.hardware.perfgenius@2.0.vendor
+    
+PRODUCT_PACKAGES += \
+    vendor.huawei.hardware.hwvibrator@1.0.vendor
     
 PRODUCT_PACKAGES += \
     libchrlog \
