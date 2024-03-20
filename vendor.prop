@@ -22,6 +22,7 @@ persist.vendor.smart_pool=1
 debug.sf.latch_unsignaled=1
 debug.sf.enable_gl_backpressure=1
 ro.surface_flinger.running_without_sync_framework=true
+service.sf.prime_shader_cache=0
 
 # vowifi
 ro.vendor.config.hw_vowifi=true
