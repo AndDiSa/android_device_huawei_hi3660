@@ -1444,6 +1444,15 @@ service oeminfo_nvm /vendor/bin/oeminfo_nvm_server
     critical
     ioprio rt 4
     
+service vendor.hwcomposer-2-2 /vendor/bin/hw/android.hardware.graphics.composer@2.2-service
+    override
+    class hal animation
+    user system
+    group graphics drmrpc
+    capabilities SYS_NICE
+    onrestart restart surfaceflinger
+    task_profiles HighPerformance
+    
 on property:ro.build.type=eng
     mkdir /data/vendor/hwcdump 0755 system system
     restorecon_recursive /data/vendor/hwcdump
