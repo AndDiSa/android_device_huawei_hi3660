@@ -21,6 +21,7 @@ persist.vendor.smart_pool=1
 # SurfaceFlinger
 debug.sf.latch_unsignaled=1
 debug.sf.disable_backpressure=1
+ro.surface_flinger.running_without_sync_framework=true
 
 # vowifi
 ro.vendor.config.hw_vowifi=true
