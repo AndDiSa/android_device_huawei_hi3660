@@ -26,3 +26,6 @@ service.sf.prime_shader_cache=0
 
 # vowifi
 ro.vendor.config.hw_vowifi=true
+
+# Zygote
+zygote.critical_window.minute=10
