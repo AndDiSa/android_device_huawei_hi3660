@@ -64,6 +64,9 @@ media.stagefright.thumbnail.prefer_hw_codecs=true
 # Power HAL
 vendor.powerhal.disp.idle_support=false
 
+# Recovery
+persist.vendor.recovery_update=true
+
 # SurfaceFlinger
 debug.sf.latch_unsignaled=1
 debug.sf.enable_gl_backpressure=1
