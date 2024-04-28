@@ -207,43 +207,43 @@
         {
             "PowerHint": "LAUNCH",
             "Node": "CPULittleClusterMinFreq",
-            "Duration": 1500,
+            "Duration": 3000,
             "Value": "1844000"
         },
         {
             "PowerHint": "LAUNCH",
             "Node": "CPUBigClusterMinFreq",
-            "Duration": 1500,
+            "Duration": 3000,
             "Value": "2362000"
         },
         {
             "PowerHint": "LAUNCH",
             "Node": "DDRMinFreq",
-            "Duration": 1500,
+            "Duration": 3000,
             "Value": "1866000000"
         },
         {
             "PowerHint": "LAUNCH",
             "Node": "GPUMinFreq",
-            "Duration": 1500,
+            "Duration": 3000,
             "Value": "1037000000"
         },
         {
             "PowerHint": "LAUNCH",
             "Node": "TASchedtuneBoost",
-            "Duration": 2000,
+            "Duration": 3000,
             "Value": "100"
         },
         {
             "PowerHint": "LAUNCH",
             "Node": "FGSchedtuneBoost",
-            "Duration": 2000,
+            "Duration": 3000,
             "Value": "100"
         },
         {
             "PowerHint": "LAUNCH",
             "Node": "SchedtuneBoost",
-            "Duration": 2000,
+            "Duration": 3000,
             "Value": "100"
         },
         {
