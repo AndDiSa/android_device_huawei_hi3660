@@ -56,6 +56,9 @@ persist.vendor.smart_pool=1
 debug.stagefright.ccodec=0
 media.stagefright.thumbnail.prefer_hw_codecs=true
 
+# Power HAL
+vendor.powerhal.disp.idle_support=false
+
 # SurfaceFlinger
 debug.sf.latch_unsignaled=1
 debug.sf.enable_gl_backpressure=1
