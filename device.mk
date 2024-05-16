@@ -67,6 +67,9 @@ PRODUCT_PACKAGES += \
 
 PRODUCT_PACKAGES += \
     libui_shim.vendor
+    
+PRODUCT_PACKAGES += \
+    liblogshim
 
 # DRM
 PRODUCT_PACKAGES += \

@@ -80,6 +80,12 @@ function blob_fixup() {
         vendor/lib64/libcamera_algo.so)
             "${PATCHELF}" --add-needed "libui_shim.so" "${2}"
             ;;
+        vendor/lib64/libdcamera_effect.so)
+            "${PATCHELF}" --add-needed "liblogshim.so" "${2}"
+            ;;
+        vendor/lib64/libRefocusContrastPosition.so)
+            "${PATCHELF}" --add-needed "liblogshim.so" "${2}"
+            ;;
         vendor/etc/camera/*|odm/etc/camera/*)
             sed -i 's/gb2312/iso-8859-1/g' "${2}"
             sed -i 's/GB2312/iso-8859-1/g' "${2}"
