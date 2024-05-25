@@ -1,0 +1,26 @@
+//
+// Copyright (C) 2024 The LineageOS Project
+//
+// SPDX-License-Identifier: Apache-2.0
+//
+
+// fstab
+prebuilt_etc {
+    name: "fstab.hi3660",
+    src: "fstab.hi3660",
+    ramdisk_available: true,
+    vendor: true,
+}
+
+prebuilt_etc {
+    name: "fstab.modem",
+    src: "fstab.modem",
+    vendor: true,
+}
+
+prebuilt_etc {
+    name: "init.hi3660.rc",
+    src: "etc/init.hi3660.rc",
+    sub_dir: "init/hw",
+    vendor: true,
+}
