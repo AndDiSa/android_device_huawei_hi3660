@@ -1,0 +1,4 @@
+# Copyright (C) 2024 The Android Open Source Project
+
+on init
+    setprop sys.usb.configfs 1

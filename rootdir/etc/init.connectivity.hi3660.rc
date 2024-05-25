@@ -1,4 +1,4 @@
-# Copyright (C) 2008 The Android Open Source Project
+# Copyright (C) 2008-2024 The Android Open Source Project
 #
 # Licensed under the Apache License, Version 2.0 (the "License");
 # you may not use this file except in compliance with the License.
@@ -12,29 +12,30 @@
 # See the License for the specific language governing permissions and
 # limitations under the License.
 
-# beg: Hisi connectivity
-
-#union image: 110x and bcm
 on early-init
     #ro.connectivity.chiptype has been seted in init.c->main()->set_connectivity_prop()
     #setprop ro.connectivity.chiptype "hisi"
-#wifi
+    #wifi
     setprop wifi.interface wlan0
 
 on boot
-#   for bluetooth mac
+    chown bluetooth bluetooth /dev/hwbt
+    
+    # for bluetooth mac
     mkdir /data/vendor/bluedroid 02770 bluetooth bluetooth
 
-# optimize selinux strategy for OTA
+
 on post-fs-data
-#wifi
+    #wifi
     setprop wifi.interface wlan0
     setprop wifi.direct.interface p2p0
     chmod 0660 /data/vendor/wifi/wpa/wpa_supplicant.conf
-#platform
+    
+    #platform
     chmod 660 /dev/ttyAMA4
     chown system system /dev/ttyAMA4
-#vendor dir
+    
+    #vendor dir
     mkdir /data/vendor/gnss 0770 system system
     mkdir /data/vendor/cust_conn 0770 system system
 
@@ -119,12 +120,3 @@ service watchlssd /vendor/bin/gnss_watchlssd_thirdparty
     user gps
     group system inet net_raw wakelock
     disabled
-
-service fusd /vendor/bin/fusion_daemon
-    class late_start
-    user system
-    group system root wakelock
-
-#bluetooth
-
-   chown bluetooth bluetooth /dev/hwbt
