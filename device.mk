@@ -168,6 +168,11 @@ PRODUCT_PACKAGES += \
 PRODUCT_SOONG_NAMESPACES += \
     $(LOCAL_PATH) \
     $(LOCAL_PATH)/resources
+    
+# Vibrator
+PRODUCT_PACKAGES += \
+    android.hardware.vibrator@1.0-impl \
+    android.hardware.vibrator@1.0-service
 
 # Inherit the proprietary files
 $(call inherit-product, vendor/huawei/schubert/schubert-vendor.mk)
