@@ -5,3 +5,15 @@
 /vendor/bin/oeminfo_nvm_server				u:object_r:hal_oeminfo_nvm_server_exec:s0
 /vendor/bin/tlogcat					u:object_r:tee_exec:s0
 /vendor/bin/teecd					u:object_r:tee_exec:s0
+
+# Mount points
+/3rdmodem(/.*)?                                 	u:object_r:modem_file:s0
+/3rdmodemnvm(/.*)?                              	u:object_r:modem_file:s0
+/3rdmodemnvmbkp(/.*)?                           	u:object_r:modem_file:s0
+/modem_log(/.*)?                                	u:object_r:modem_file:s0
+/mnt/modem/mnvm2:0(/.*)?                        	u:object_r:modem_file:s0
+/mnt/modem/modem_secure(/.*)?                   	u:object_r:modem_file:s0
+/vendor/modem/modem_fw(/.*)?                    	u:object_r:modem_vendor_file:s0
+
+/sec_storage(/.*)?                              	u:object_r:teecd_data_file:s0
+/splash2(/.*)?                                  	u:object_r:splash_data_file:s0
