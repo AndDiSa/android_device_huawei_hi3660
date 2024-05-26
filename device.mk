@@ -41,6 +41,11 @@ PRODUCT_PACKAGES += \
     libui-v28 \
     libion
     
+# Gatekeeper
+PRODUCT_PACKAGES += \
+    android.hardware.gatekeeper@1.0-service \
+    android.hardware.gatekeeper@1.0-impl
+    
 # Hisi init
 PRODUCT_PACKAGES += \
     hisi_init
