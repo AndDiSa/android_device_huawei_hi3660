@@ -611,6 +611,10 @@ on early-boot
 on boot
     start hisecd
     
+    # Oeminfo
+    chmod 0666 /dev/socket/oeminfo_nvm
+    chown system system /dev/socket/oeminfo_nvm
+    
     chown radio radio /proc/modemstatus
     
     chmod 0755 /sys/kernel/debug/tracing
