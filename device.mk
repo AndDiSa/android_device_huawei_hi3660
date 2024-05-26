@@ -17,6 +17,10 @@ PRODUCT_CHARACTERISTICS := tablet
 # Fastbootd
 PRODUCT_PACKAGES += \
     fastbootd
+    
+# Hisi init
+PRODUCT_PACKAGES += \
+    hisi_init
 
 # Init
 PRODUCT_PACKAGES += \

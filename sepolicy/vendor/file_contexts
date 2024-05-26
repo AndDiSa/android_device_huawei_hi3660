@@ -6,6 +6,8 @@
 /vendor/bin/tlogcat					u:object_r:tee_exec:s0
 /vendor/bin/teecd					u:object_r:tee_exec:s0
 
+/vendor/bin/hisi_init					u:object_r:hal_hisi_init_exec:s0
+
 # Mount points
 /3rdmodem(/.*)?                                 	u:object_r:modem_file:s0
 /3rdmodemnvm(/.*)?                              	u:object_r:modem_file:s0
