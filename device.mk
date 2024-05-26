@@ -73,7 +73,8 @@ PRODUCT_ENFORCE_RRO_TARGETS := *
 
 # Soong namespaces
 PRODUCT_SOONG_NAMESPACES += \
-    $(LOCAL_PATH)
+    $(LOCAL_PATH) \
+    $(LOCAL_PATH)/resources
 
 # Inherit the proprietary files
 $(call inherit-product, vendor/huawei/schubert/schubert-vendor.mk)
