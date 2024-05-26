@@ -104,6 +104,9 @@ PRODUCT_COPY_FILES += \
 PRODUCT_PACKAGES += \
     libiawareperf_client \
     libperfgenius_vendor_client
+    
+PRODUCT_PACKAGES += \
+    vendor.huawei.hardware.perfgenius@2.0.vendor
 
 # Init
 PRODUCT_PACKAGES += \
