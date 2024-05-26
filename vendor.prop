@@ -4,6 +4,9 @@ persist.kirin.media.lowlatency.enable=false
 persist.kirin.media.offload.enable=true
 persist.kirin.media.usbvoice.enable=true
 
+# Bluetooth
+ro.bt.bdaddr_path=/data/vendor/bluedroid/macbt
+
 # Camera
 vendor.camera.dis.flag=2
 vendor.camera.tnr.flag=1
