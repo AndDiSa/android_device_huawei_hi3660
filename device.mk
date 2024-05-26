@@ -107,6 +107,12 @@ PRODUCT_PACKAGES += \
     
 PRODUCT_PACKAGES += \
     vendor.huawei.hardware.perfgenius@2.0.vendor
+    
+PRODUCT_PACKAGES += \
+    libchrlog \
+    libhwlog \
+    libimonitor \
+    libxcollie
 
 # Init
 PRODUCT_PACKAGES += \
