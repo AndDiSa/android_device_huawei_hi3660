@@ -58,6 +58,15 @@ PRODUCT_PACKAGES += \
     libhidltransport.vendor \
     libhwbinder.vendor \
     libhwbinder
+    
+# DRM
+PRODUCT_PACKAGES += \
+    android.hardware.drm@1.0-impl \
+    android.hardware.drm@1.0-service \
+    android.hardware.drm@1.1-service.clearkey
+
+PRODUCT_PACKAGES += \
+    android.hardware.drm@1.1.vendor
 
 # Fastbootd
 PRODUCT_PACKAGES += \
