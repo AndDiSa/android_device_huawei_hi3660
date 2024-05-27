@@ -118,6 +118,7 @@ BOARD_VENDOR_SEPOLICY_DIRS += $(DEVICE_PATH)/sepolicy/vendor
 
 # Vintf
 DEVICE_MANIFEST_FILE := $(DEVICE_PATH)/prebuilts/manifest.xml
+DEVICE_MATRIX_FILE := $(DEVICE_PATH)/prebuilts/compatibility_matrix.xml
 
 # VNDK
 PRODUCT_FULL_TREBLE_OVERRIDE := true
