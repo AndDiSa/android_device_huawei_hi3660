@@ -6,6 +6,7 @@
 /vendor/bin/hw/vendor.huawei.hardware.graphics.mediacomm@2.0-service		u:object_r:hal_mediacomm_default_exec:s0
 /vendor/bin/hw/vendor.huawei.hardware.hwdisplay@1.0-service			u:object_r:hal_display_default_exec:s0
 /vendor/bin/hw/vendor.huawei.hardware.hwdisplay.displayengine@1.2-service	u:object_r:hal_display_default_exec:s0
+/vendor/bin/hw/android.hardware.power-service.huawei-libperfmgr			u:object_r:hal_power_default_exec:s0
 
 /vendor/bin/hisecd								u:object_r:hal_oeminfo_nvm_server_exec:s0
 /vendor/bin/hivwserver								u:object_r:hal_hivwserver_default_exec:s0

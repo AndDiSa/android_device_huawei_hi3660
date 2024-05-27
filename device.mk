@@ -183,6 +183,17 @@ PRODUCT_COPY_FILES += \
     frameworks/native/data/etc/android.software.midi.xml:$(TARGET_COPY_OUT_VENDOR)/etc/permissions/android.software.midi.xml \
     frameworks/native/data/etc/android.software.verified_boot.xml:$(TARGET_COPY_OUT_VENDOR)/etc/permissions/android.software.verified_boot.xml
 
+# Power
+PRODUCT_PACKAGES += \
+    android.hardware.power-service.huawei-libperfmgr
+
+PRODUCT_COPY_FILES += \
+    $(LOCAL_PATH)/prebuilts/powerhint.json:$(TARGET_COPY_OUT_VENDOR)/etc/powerhint.json
+
+PRODUCT_COPY_FILES += \
+    system/core/libprocessgroup/profiles/cgroups_28.json:$(TARGET_COPY_OUT_VENDOR)/etc/cgroups.json \
+    system/core/libprocessgroup/profiles/task_profiles_28.json:$(TARGET_COPY_OUT_VENDOR)/etc/task_profiles.json
+
 # RRO
 PRODUCT_ENFORCE_RRO_TARGETS := *
 
@@ -195,7 +206,10 @@ PRODUCT_PACKAGES += \
 # Soong namespaces
 PRODUCT_SOONG_NAMESPACES += \
     $(LOCAL_PATH) \
-    $(LOCAL_PATH)/resources
+    hardware/google/interfaces \
+    hardware/google/pixel \
+    $(LOCAL_PATH)/resources \
+    $(LOCAL_PATH)/resources/power-libperfmgr
     
 # USB
 PRODUCT_PACKAGES += \
