@@ -18,5 +18,9 @@ ro.fastbootd.available=true
 vendor.debug.config.mmu_en=1
 persist.vendor.smart_pool=1
 
+# SurfaceFlinger
+debug.sf.latch_unsignaled=1
+debug.sf.disable_backpressure=1
+
 # vowifi
 ro.vendor.config.hw_vowifi=true
