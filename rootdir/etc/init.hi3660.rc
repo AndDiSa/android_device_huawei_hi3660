@@ -610,6 +610,7 @@ on early-boot
 
     # for CTS Bugfix
     write /dev/pmsg0 1
+
 on boot
     start hisecd
     

@@ -68,6 +68,9 @@ function blob_fixup() {
         vendor/lib/libwvhidl.so)
             "${PATCHELF}" --replace-needed "libprotobuf-cpp-lite.so" "libprotobuf-cpp-lite-v29.so" "${2}"
             ;;
+        vendor/bin/hw_charger)
+            sed -i 's|/system/etc/%s.png|/vendor/etc/%s.png|g' "${2}"
+            ;;
     esac
 }
 

@@ -4,6 +4,10 @@ Schubert EMUI9.1 vendor blobs
 vendor/etc/bluetooth/bt_vendor.conf
 vendor/lib64/libbt-vendor-hisi.so:vendor/lib64/libbt-vendor.so
 
+# Charger stock EMUI9.1
+sbin/charger:vendor/bin/hw_charger
+syetem/etc/charger/*:vendor/etc/charger/
+
 # DRM
 preavs/bin/hw/android.hardware.drm@1.1-service.widevine:vendor/bin/hw/android.hardware.drm@1.1-service.widevine
 vendor/etc/init/android.hardware.drm@1.1-service.widevine.rc
