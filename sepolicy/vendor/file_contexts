@@ -1,5 +1,6 @@
 # file contexts schubert/hi3660
 
+/vendor/bin/hw/android.hardware.audio.service.hisi 				u:object_r:hal_audio_default_exec:s0
 /vendor/bin/hw/android.hardware.drm@1.1-service.widevine			u:object_r:hal_drm_default_exec:s0
 /vendor/bin/hw/android.hardware.drm-service.clearkey				u:object_r:hal_drm_clearkey_aidl_exec:s0
 /vendor/bin/hw/android.hardware.light-service.huawei				u:object_r:hal_light_default_exec:s0

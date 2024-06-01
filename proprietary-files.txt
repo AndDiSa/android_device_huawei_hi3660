@@ -1,5 +1,20 @@
 Schubert EMUI9.1 vendor blobs
 
+# Audio
+vendor/lib64/hw/audio.primary.hisi.so:vendor/lib64/hw/audio.primary_hisi.hi3660.so
+vendor/lib64/libasd.so
+vendor/lib64/libaudio_custom.so
+vendor/lib64/libaudio_custom_v2.so
+vendor/lib64/libaudiodump.so
+vendor/lib64/libaudio_utils.so
+vendor/lib64/libhuaweiaudioeffectutil.so
+vendor/lib64/libmax98925.so
+vendor/lib64/libsmartpakit.so
+vendor/lib64/libtas2560.so
+vendor/lib64/libtfa9872.so
+vendor/lib64/soundfx/libhuaweiprocessing.so
+vendor/lib64/soundfx/liboffloadvisualizer.so
+
 # Bluetooth
 vendor/etc/bluetooth/bt_vendor.conf
 vendor/lib64/libbt-vendor-hisi.so:vendor/lib64/libbt-vendor.so
