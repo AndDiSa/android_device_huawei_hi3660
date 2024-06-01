@@ -12,7 +12,11 @@
 
 /vendor/bin/hisecd								u:object_r:hal_oeminfo_nvm_server_exec:s0
 /vendor/bin/hivwserver								u:object_r:hal_hivwserver_default_exec:s0
+/vendor/bin/oam_hisi								u:object_r:hal_hisi_connectivity_exec:s0
+/vendor/bin/octty								u:object_r:hal_hisi_connectivity_exec:s0
+/vendor/bin/oeminfo_gamma							u:object_r:hal_oeminfo_nvm_server_exec:s0
 /vendor/bin/oeminfo_nvm_server							u:object_r:hal_oeminfo_nvm_server_exec:s0
+vendor/bin/start_connectivity_hisi						u:object_r:hal_hisi_connectivity_exec:s0
 /vendor/bin/tlogcat								u:object_r:tee_exec:s0
 /vendor/bin/teecd								u:object_r:tee_exec:s0
 
