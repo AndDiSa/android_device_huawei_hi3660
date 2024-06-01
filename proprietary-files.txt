@@ -167,3 +167,6 @@ odm/etc/firmware/ts/schubert_parade_SCHU31180_toptouch_tianma.bin
 odm/etc/firmware/ts/schubert_parade_SCHU31180_toptouch_tianma_limits.csv
 odm/etc/firmware/ts/schubert_parade_SCHU31180_toptouch_truly.bin
 odm/etc/firmware/ts/schubert_parade_SCHU31180_toptouch_truly_limits.csv
+
+# Sensors
+vendor/lib64/hw/sensors.default.so:vendor/lib64/hw/sensors.hi3660.so
