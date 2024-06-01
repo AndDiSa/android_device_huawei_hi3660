@@ -63,6 +63,9 @@ PRODUCT_PACKAGES += \
 PRODUCT_PACKAGES += \
     android.hardware.drm-service.clearkey \
     android.hardware.drm@1.1.vendor
+    
+PRODUCT_PACKAGES += \
+    libmockdrmcryptoplugin
 
 # Fastbootd
 PRODUCT_PACKAGES += \
