@@ -183,5 +183,30 @@ odm/etc/firmware/ts/schubert_parade_SCHU31180_toptouch_tianma_limits.csv
 odm/etc/firmware/ts/schubert_parade_SCHU31180_toptouch_truly.bin
 odm/etc/firmware/ts/schubert_parade_SCHU31180_toptouch_truly_limits.csv
 
+# Oeminfo
+vendor/bin/hisecd
+vendor/bin/oeminfo_gamma
+vendor/bin/oeminfo_nvm_server
+vendor/lib/libconn_factory_test.so
+vendor/lib/lib_device_interface.so
+vendor/lib/libfaccommon_share.so
+vendor/lib/libfacsignedapi_share.so
+vendor/lib/lib_factory_interface.so
+vendor/lib/libhuaweicust.so
+vendor/lib/libjtag_wdt_ctrl.so
+vendor/lib/lib_mmi_interface.so
+vendor/lib/libnvme.so
+vendor/lib/liboeminfo.so
+vendor/lib64/libconn_factory_test.so
+vendor/lib64/lib_device_interface.so
+vendor/lib64/libfaccommon_share.so
+vendor/lib64/libfacsignedapi_share.so
+vendor/lib64/lib_factory_interface.so
+vendor/lib64/libhuaweicust.so
+vendor/lib64/libjtag_wdt_ctrl.so
+vendor/lib64/lib_mmi_interface.so
+vendor/lib64/libnvme.so
+vendor/lib64/liboeminfo.so
+
 # Sensors
 vendor/lib64/hw/sensors.default.so:vendor/lib64/hw/sensors.hi3660.so
