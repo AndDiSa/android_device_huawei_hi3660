@@ -15,6 +15,36 @@ vendor/lib64/libtfa9872.so
 vendor/lib64/soundfx/libhuaweiprocessing.so
 vendor/lib64/soundfx/liboffloadvisualizer.so
 
+odm/etc/audio/algorithm/algorithm_SCHUBERT_normal.xml
+odm/etc/audio/asrenhance/parameters_nuance_16k_2EC.bsd
+odm/etc/audio/asrenhance/parameters_nuance_16k_EC.bsd
+odm/etc/audio/asrenhance/parameters_nuance_16k_NR.bsd
+odm/etc/audio/asrenhance/parameters_nuance_16k_NR_vib.bsd
+odm/etc/audio/dts/dts_SCHUBERT_normal.xml
+odm/etc/audio/hi6403/mixer_paths_SCHUBERT.xml
+odm/etc/audio/hi6403/mixer_volumes_SCHUBERT_ce.xml
+odm/etc/audio/hi6403/mixer_volumes_SCHUBERT_cmcciot.xml
+odm/etc/audio/hi6403/mixer_volumes_SCHUBERT_gcf.xml
+odm/etc/audio/hi6403/mixer_volumes_SCHUBERT_normal.xml
+odm/etc/audio/hi6403/mixer_volumes_SCHUBERT_telecomiot.xml
+odm/etc/audio/hi6403/mixer_volumes_SCHUBERT_unicomiot.xml
+odm/etc/audio/hi6403/pop_seq_SCHUBERT.xml
+odm/etc/audio/HiVoice/HiVoice_SCHUBERT_normal.xml
+odm/etc/audio/mbdrc/mbdrc_SCHUBERT_normal.xml
+odm/etc/audio/modem/modem_SCHUBERT_cmcciot.xml
+odm/etc/audio/modem/modem_SCHUBERT_gcf.xml
+odm/etc/audio/modem/modem_SCHUBERT_normal.xml
+odm/etc/audio/modem/modem_SCHUBERT_telecomiot.xml
+odm/etc/audio/modem/modem_SCHUBERT_unicomiot.xml
+odm/etc/audio/nxp/SCHUBERT_tfa9872_tfa9872_smartpa_algo.xml
+odm/etc/audio/nxp/SCHUBERT_user_defined_scene.xml
+odm/etc/audio/nxp/tfa9872_tfa9872_configs.xml
+odm/etc/audio/sws/sws_3d_SCHUBERT_normal.cfg
+odm/etc/audio/sws/sws_SCHUBERT_normal.xml
+odm/etc/audio/sws/sws_tws_SCHUBERT_normal.cfg
+odm/etc/audio/volume/audio_policy_volumes.xml
+odm/etc/audio/volume/volume_point.xml
+
 # Bluetooth
 vendor/etc/bluetooth/bt_vendor.conf
 vendor/lib64/libbt-vendor-hisi.so:vendor/lib64/libbt-vendor.so
