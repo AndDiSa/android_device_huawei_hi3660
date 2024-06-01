@@ -57,6 +57,8 @@ syetem/etc/charger/*:vendor/etc/charger/
 vendor/bin/oam_hisi
 vendor/bin/octty
 vendor/bin/start_connectivity_hisi
+vendor/etc/cfg_sht_hisi.ini
+vendor/etc/cfg_sht_w09_hisi.ini
 vendor/lib/libc_sec_hisi_connectivity.so
 vendor/lib/libpf_customize_hisi.so
 vendor/lib/libpf_oneimage_hisi.so

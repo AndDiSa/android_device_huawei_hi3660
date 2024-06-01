@@ -136,6 +136,10 @@ PRODUCT_PACKAGES += \
     libhwlog \
     libimonitor \
     libxcollie
+    
+PRODUCT_COPY_FILES += \
+    $(LOCAL_PATH)/prebuilts/cfg_sht_hisi.ini:$(TARGET_COPY_OUT_VENDOR)/etc/cfg_sht_hisi.ini \
+    $(LOCAL_PATH)/prebuilts/cfg_sht_w09_hisi.ini:$(TARGET_COPY_OUT_VENDOR)/etc/cfg_sht_w09_hisi.ini
 
 # Init
 PRODUCT_PACKAGES += \
