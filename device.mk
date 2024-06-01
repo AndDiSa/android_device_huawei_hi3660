@@ -107,6 +107,9 @@ PRODUCT_PACKAGES += \
     android.hardware.light-service.huawei
     
 # Media
+PRODUCT_PACKAGES += \
+    libmockcasplugin
+
 PRODUCT_COPY_FILES += \
     $(LOCAL_PATH)/prebuilts/media_codecs.xml:$(TARGET_COPY_OUT_VENDOR)/etc/media_codecs.xml \
     $(LOCAL_PATH)/prebuilts/media_codecs_performance.xml:$(TARGET_COPY_OUT_VENDOR)/etc/media_codecs_performance.xml \
