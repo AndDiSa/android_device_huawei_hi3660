@@ -1,5 +1,9 @@
 Schubert EMUI9.1 vendor blobs
 
+# Bluetooth
+vendor/etc/bluetooth/bt_vendor.conf
+vendor/lib64/libbt-vendor-hisi.so:vendor/lib64/libbt-vendor.so
+
 # Graphics
 vendor/bin/hw/vendor.huawei.hardware.graphics.displayeffect@1.0-service
 vendor/bin/hw/vendor.huawei.hardware.graphics.mediacomm@2.0-service
