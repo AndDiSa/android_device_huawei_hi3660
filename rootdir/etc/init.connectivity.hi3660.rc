@@ -13,20 +13,22 @@
 # limitations under the License.
 
 on early-init
-    #ro.connectivity.chiptype has been seted in init.c->main()->set_connectivity_prop()
-    #setprop ro.connectivity.chiptype "hisi"
-    #wifi
     setprop wifi.interface wlan0
+    setprop wifi.direct.interface p2p0
 
 on boot
     chown bluetooth bluetooth /dev/hwbt
     
 on post-fs-data
-    #wifi
-    setprop wifi.interface wlan0
-    setprop wifi.direct.interface p2p0
-    chmod 0660 /data/vendor/wifi/wpa/wpa_supplicant.conf
-    
+    # Create the directories used by the Wireless subsystem
+    mkdir /data/vendor/wifi 0770 wifi wifi
+    mkdir /data/vendor/wifi/sockets 0770 wifi wifi
+    mkdir /data/vendor/wifi/hostapd 0770 wifi wifi
+    mkdir /data/vendor/wifi/hostapd/ctrl 0770 wifi wifi
+    mkdir /data/vendor/wifi/wpa_supplicant 0770 wifi wifi
+    mkdir /data/vendor/wifi/wpa 0770 wifi wifi
+    mkdir /data/vendor/wifi/wpa/sockets 0770 wifi wifi
+   
     # Create the directories used by the Bluetooth subsystem
     mkdir /data/vendor/bluedroid 0771 bluetooth bluetooth
     
