@@ -56,6 +56,9 @@ persist.vendor.smart_pool=1
 debug.stagefright.ccodec=0
 media.stagefright.thumbnail.prefer_hw_codecs=true
 
+# Radio
+ro.config.ipv4.mtu=1400
+
 # SurfaceFlinger
 debug.sf.latch_unsignaled=1
 debug.sf.enable_gl_backpressure=1
