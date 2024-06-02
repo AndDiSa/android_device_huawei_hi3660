@@ -243,7 +243,8 @@ PRODUCT_PACKAGES += \
     libril
     
 PRODUCT_PACKAGES += \
-    android.hardware.secure_element@1.0.vendor
+    android.hardware.secure_element@1.0.vendor \
+    android.hardware.nfc@1.1.vendor
 
 # RRO
 PRODUCT_ENFORCE_RRO_TARGETS := *
