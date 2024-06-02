@@ -60,10 +60,6 @@ PRODUCT_PACKAGES += \
     libhwbinder.vendor \
     libhwbinder
     
-# Biometrics
-PRODUCT_PACKAGES += \
-    vendor.huawei.hardware.biometrics.fingerprint@2.1.vendor
-    
 # DRM
 PRODUCT_PACKAGES += \
     android.hardware.drm-service.clearkey \
@@ -75,6 +71,17 @@ PRODUCT_PACKAGES += \
 # Fastbootd
 PRODUCT_PACKAGES += \
     fastbootd
+    
+# Fingerprint
+PRODUCT_PACKAGES += \
+    vendor.huawei.hardware.biometrics.fingerprint@2.1.vendor
+
+PRODUCT_PACKAGES += \
+    vendor.huawei.hardware.hwvibrator@1.0.vendor
+
+PRODUCT_COPY_FILES += \
+    $(LOCAL_PATH)/prebuilts/native_packages.bin:$(TARGET_COPY_OUT_VENDOR)/etc/native_packages.bin \
+    $(LOCAL_PATH)/prebuilts/system_native_packages.bin:$(TARGET_COPY_OUT_SYSTEM)/etc/native_packages.bin
     
 # Graphics
 PRODUCT_PACKAGES += \
@@ -141,9 +148,6 @@ PRODUCT_PACKAGES += \
     
 PRODUCT_PACKAGES += \
     vendor.huawei.hardware.perfgenius@2.0.vendor
-    
-PRODUCT_PACKAGES += \
-    vendor.huawei.hardware.hwvibrator@1.0.vendor
     
 PRODUCT_PACKAGES += \
     libchrlog \

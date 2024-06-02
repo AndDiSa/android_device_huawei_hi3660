@@ -49,12 +49,6 @@ odm/etc/audio/volume/volume_point.xml
 vendor/etc/bluetooth/bt_vendor.conf
 vendor/lib64/libbt-vendor-hisi.so:vendor/lib64/libbt-vendor.so
 
-# Biometrics
-vendor/bin/hw/vendor.huawei.hardware.biometrics.fingerprint@2.1-service
-vendor/etc/init/vendor.huawei.hardware.biometrics.fingerprint@2.1-service.rc
-vendor/lib/hw/fingerprint.hi3660.so
-vendor/lib64/hw/fingerprint.hi3660.so
-
 # Charger stock EMUI9.1
 sbin/charger:vendor/bin/hw_charger
 syetem/etc/charger/*:vendor/etc/charger/
@@ -79,6 +73,39 @@ preavs/bin/hw/android.hardware.drm@1.1-service.widevine:vendor/bin/hw/android.ha
 vendor/etc/init/android.hardware.drm@1.1-service.widevine.rc
 preavs/oemcrypto/liboemcrypto.so:vendor/lib/liboemcrypto.so
 preavs/lib/libwvhidl.so:vendor/lib/libwvhidl.so
+
+# Fingerprint
+vendor/bin/hw/vendor.huawei.hardware.biometrics.fingerprint@2.1-service
+vendor/bin/fpc_1021_ta.sec
+vendor/bin/fpc_1021_ta_mha.sec
+vendor/bin/fpc_1021_ta_sw15.sec
+vendor/bin/fpc_1022_ta.sec
+vendor/bin/fpc_1022_ta_sw20.sec
+vendor/bin/fpc_1023_ta.sec
+vendor/bin/fpc_1075_ta.sec
+vendor/bin/fpc_1140_ta.sec
+vendor/bin/fpc_1140_ta_sw20.sec
+vendor/bin/fpc_1262_ta.sec
+vendor/bin/fpc_1265_ta.sec
+vendor/bin/fpc_1266Z120_ta.sec
+vendor/bin/fpc_1268_ta.sec
+vendor/bin/fpc_1268_ta_sw22.sec
+vendor/bin/goodix_3206_ta.sec
+vendor/bin/goodix_3288_ta.sec
+vendor/bin/goodix_5266_ta.sec
+vendor/bin/goodix_5296_ta.sec
+vendor/bin/goodix_8206_ta.sec
+vendor/bin/silead_6165_ta.sec
+vendor/bin/silead_61856_ta.sec
+vendor/bin/silead_6185_ta.sec
+vendor/bin/silead_6275_ta.sec
+vendor/bin/syna_109A0_ta.sec
+vendor/bin/syna_155A_ta.sec
+vendor/etc/init/vendor.huawei.hardware.biometrics.fingerprint@2.1-service.rc
+vendor/lib/hw/fingerprint.hi3660.so
+vendor/lib/lib_fpc_tac_shared.so
+vendor/lib64/hw/fingerprint.hi3660.so
+vendor/lib64/lib_fpc_tac_shared.so
 
 # Firmware
 vendor/firmware/BCM4345C0_003.001.025.0155.0263.hcd
@@ -294,17 +321,13 @@ vendor/bin/tlogcat
 vendor/etc/init/vendor.huawei.hardware.libteec@2.0-service.rc
 vendor/etc/native_packages.xml:vendor/etc/native_packages.bin
 vendor/lib/hw/vendor.huawei.hardware.libteec@2.0-impl.so
-vendor/lib/libc_secshared.so
 vendor/lib/libstorekeybox.so
 vendor/lib/libteec.so
 vendor/lib/libteec_eid.so
-vendor/lib/libteec_vendor.so
 vendor/lib64/hw/vendor.huawei.hardware.libteec@2.0-impl.so
-vendor/lib64/libc_secshared.so
 vendor/lib64/libstorekeybox.so
 vendor/lib64/libteec.so
 vendor/lib64/libteec_eid.so
-vendor/lib64/libteec_vendor.so
 
 # TEE Configs
 vendor/bin/32e6a847-ac89-4f81-8a13-f4ae50451d7f.sec
@@ -326,5 +349,3 @@ vendor/bin/d77c4d60-d279-4425-afa8-7f94559eae16.sec
 vendor/bin/e00d7df7-79e5-4507-9d8c-df03d5a7a8a5.sec
 vendor/bin/e8014913-e501-4d44-a9d6-058ec3b93b90.sec
 vendor/bin/fd1bbfb2-9a62-4b27-8fdb-a503529076af.sec
-vendor/bin/syna_109A0_ta.sec
-vendor/bin/syna_155A_ta.sec
