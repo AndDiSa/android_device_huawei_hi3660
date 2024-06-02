@@ -44,6 +44,10 @@ drm.service.enabled=true
 # Fastbootd
 ro.fastbootd.available=true
 
+# GPS/GNSS
+ro.hardware.hisupl=hi1102
+ro.hardware.gps=hi1102
+
 # Gralloc
 vendor.debug.config.mmu_en=1
 persist.vendor.smart_pool=1

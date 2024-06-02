@@ -262,6 +262,7 @@ vendor/lib64/vendor.huawei.hardware.hwdisplay.displayengine@1.2.so
 vendor/lib64/vendor.huawei.hardware.hwdisplay@1.0.so
 
 # GPS/GNSS
+system/app/gnss_supl20service_hisi/gnss_supl20service_hisi.apk:system/priv-app/gnss_supl20service_hisi/gnss_supl20service_hisi.apk
 vendor/bin/hw/vendor.huawei.hardware.gnss@1.2-service
 vendor/bin/hw/vendor.huawei.hardware.hisupl@1.0-service
 vendor/bin/gnss_control_hisi
