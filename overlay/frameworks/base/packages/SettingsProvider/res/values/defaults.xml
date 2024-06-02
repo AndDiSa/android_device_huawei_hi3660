@@ -14,9 +14,12 @@
      limitations under the License.
 -->
 <resources>
+    <!-- Disable bluetooth by default -->
+    <bool name="def_bluetooth_on">false</bool>
+    
     <!-- Set the automatic brightness mode on by default -->
     <bool name="def_screen_brightness_automatic_mode">true</bool>
     
-        <!-- Default for Settings.Global.DEVICE_NAME $1=MODEL-->
-    <string name="def_device_name_simple">MediaPad M5</string>
+    <!-- Default for Settings.Global.DEVICE_NAME $1=MODEL-->
+    <string name="def_device_name_simple">Huawei MediaPad M5</string>
 </resources>
