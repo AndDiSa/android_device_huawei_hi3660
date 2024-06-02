@@ -118,6 +118,9 @@ BOARD_ROOT_EXTRA_FOLDERS += \
     modem_log \
     sec_storage \
     splash2
+    
+BOARD_ROOT_EXTRA_SYMLINKS += \
+	/odm/hw_odm:/hw_odm
 
 # SEPolicy
 SELINUX_IGNORE_NEVERALLOWS := true
