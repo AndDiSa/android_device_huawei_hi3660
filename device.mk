@@ -83,17 +83,21 @@ PRODUCT_COPY_FILES += \
     $(LOCAL_PATH)/prebuilts/native_packages.bin:$(TARGET_COPY_OUT_VENDOR)/etc/native_packages.bin \
     $(LOCAL_PATH)/prebuilts/system_native_packages.bin:$(TARGET_COPY_OUT_SYSTEM)/etc/native_packages.bin
     
+# Gatekeeper
+PRODUCT_PACKAGES += \
+    android.hardware.gatekeeper@1.0-service \
+    android.hardware.gatekeeper@1.0-impl
+
+# GPS/GNSS
+PRODUCT_PACKAGES += \
+    android.hardware.gnss@1.1.vendor
+    
 # Graphics
 PRODUCT_PACKAGES += \
     android.hardware.graphics.allocator@2.0-impl \
     android.hardware.graphics.allocator@2.0-service \
     android.hardware.graphics.composer@2.2-service \
     android.hardware.graphics.mapper@2.0-impl
-
-# Gatekeeper
-PRODUCT_PACKAGES += \
-    android.hardware.gatekeeper@1.0-service \
-    android.hardware.gatekeeper@1.0-impl
     
 # Health
 PRODUCT_PACKAGES += \
