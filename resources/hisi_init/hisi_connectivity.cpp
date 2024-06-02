@@ -30,14 +30,7 @@ constexpr const char* kDefaultId = "0X00000000";
 constexpr const char* kPropRilReady = "sys.rilprops_ready";
 
 // clang-format off
-constexpr const char* kDenylistedProperties[] = {
-    "ro.telephony.default_network"
-};
-
-constexpr const char* kPhonePropPaths[] = {
-    "/vendor/phone.prop",
-    "/odm/phone.prop"
-};
+constexpr const char* kPhonePropPaths = "/vendor/phone.prop";
 // clang-format on
 
 std::string ReadProductId() {
@@ -70,13 +63,8 @@ static int SetPhoneProperties(std::string prid, std::string propFile) {
 
             if (ret == 0) {
                 std::vector<std::string> parts = android::base::Split(line, "=");
-                if (parts.size() == 2) {
-                    if (std::find(std::begin(kDenylistedProperties),
-                                  std::end(kDenylistedProperties),
-                                  parts.at(0)) == std::end(kDenylistedProperties)) {
+                if (parts.size() == 2)
                         set_property(parts.at(0), parts.at(1));
-                    }
-                }
             }
         }
     }
@@ -89,14 +77,12 @@ static int LoadPhoneProperties() {
 
     std::string productId = ReadProductId();
     if (productId != kDefaultId) {
-        for (const auto& path : kPhonePropPaths) {
-            if ((ret = SetPhoneProperties(productId, path)) == 0) {
-                LOG(INFO) << "Successfully loaded phone properties ( " << path << ") for "
-                          << productId;
-                set_property(kPropRilReady, "1");
-                return ret;
-            }
-        }
+         if ((ret = SetPhoneProperties(productId, kPhonePropPaths)) == 0) {
+             LOG(INFO) << "Successfully loaded phone properties ( " << kPhonePropPaths << ") for "
+                       << productId;
+             set_property(kPropRilReady, "1");
+             return ret;
+         }
     }
 
     return ret;

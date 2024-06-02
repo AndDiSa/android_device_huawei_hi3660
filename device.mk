@@ -240,6 +240,9 @@ PRODUCT_PACKAGES += \
 
 PRODUCT_PACKAGES += \
     librilutils
+    
+PRODUCT_PACKAGES += \
+    android.hardware.secure_element@1.0.vendor
 
 # RRO
 PRODUCT_ENFORCE_RRO_TARGETS := *

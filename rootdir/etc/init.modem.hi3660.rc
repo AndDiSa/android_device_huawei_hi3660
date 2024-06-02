@@ -6,7 +6,7 @@ on fs
     mkdir /mnt/modem/mnvm2:0 0755 root system
 
     mount_all /vendor/etc/fstab.modem
-    chown radio radio sys/devices/platform/balong_power/state
+    chown radio radio /sys/devices/platform/balong_power/state
 
 on zygote-start
     # When pureandroid test,The vold process will unmount mnt directory mounted partition ,
@@ -15,3 +15,23 @@ on zygote-start
     mount_all /vendor/etc/fstab.modem --early
     wait /sys/devices/platform/his_modem/modem_sysboot_start
     write /sys/devices/platform/his_modem/modem_sysboot_start 1
+    
+service vendor.ril-daemon /vendor/bin/hw/rild
+    class main
+    user root
+    group radio cache inet misc audio log readproc wakelock system
+    capabilities BLOCK_SUSPEND NET_ADMIN NET_RAW
+    disabled
+    
+on property:sys.rilprops_ready=1
+    start vendor.ril-daemon
+    
+service vendor.secure_element_hal_service /vendor/bin/hw/android.hardware.secure_element@1.0-service.hisi
+    class hal
+    user secure_element
+    group secure_element system nfc
+    disabled
+
+on property:ro.boot.product.hardware.sku=SHT-AL09
+    start vendor.secure_element_hal_service
+    setprop ro.odm.config.modem_number 1
