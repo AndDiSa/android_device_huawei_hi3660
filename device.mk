@@ -60,6 +60,19 @@ PRODUCT_PACKAGES += \
     libhwbinder.vendor \
     libhwbinder
     
+# Camera
+PRODUCT_PACKAGES += \
+    android.hardware.camera.provider@2.4-impl
+
+PRODUCT_PACKAGES += \
+    vendor.huawei.hardware.biometrics.hwfacerecognize@1.1.vendor \
+    vendor.huawei.hardware.hwfactoryinterface@1.1.vendor \
+    vendor.huawei.hardware.camera.cfgsvr@1.1.vendor \
+    vendor.huawei.hardware.sensors@1.0.vendor
+
+PRODUCT_PACKAGES += \
+    libui_shim.vendor
+    
 # DRM
 PRODUCT_PACKAGES += \
     android.hardware.drm-service.clearkey \

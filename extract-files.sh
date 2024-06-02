@@ -77,6 +77,18 @@ function blob_fixup() {
         vendor/lib*/libril-hisi.so)
             "${PATCHELF}" --set-soname "libril-hisi.so" "${2}"
             ;;
+        vendor/lib64/libcamera_algo.so)
+            "${PATCHELF}" --add-needed "libui_shim.so" "${2}"
+            ;;
+        vendor/etc/camera/*|odm/etc/camera/*)
+            sed -i 's/gb2312/iso-8859-1/g' "${2}"
+            sed -i 's/GB2312/iso-8859-1/g' "${2}"
+            sed -i 's/xmlversion/xml version/g' "${2}"
+            ;;
+        odm/lib64/hwcam/hwcam.hi3660.m.SHT.so)
+            "${PATCHELF}" --remove-needed "vendor.huawei.hardware.ai@1.0.so" "${2}"
+            "${PATCHELF}" --remove-needed "vendor.huawei.hardware.biometrics.hwsecurefacerecognize@1.0.so" "${2}"
+            ;;
     esac
 }
 

@@ -1470,6 +1470,14 @@ service vendor.keymaster-3-0 /vendor/bin/hw/android.hardware.keymaster@3.0-servi
     user system
     group system drmrpc
     
+service CameraDaemon /vendor/bin/CameraDaemon hi3660 SHT
+    class main
+    user media
+    group audio camera inet net_bt net_bt_admin net_bw_acct drmrpc mediadrm system
+    ioprio rt 4
+    capabilities SYS_NICE
+    writepid /dev/cpuset/top-app/tasks /dev/stune/top-app/tasks
+    
 on property:ro.build.type=eng
     mkdir /data/vendor/hwcdump 0755 system system
     restorecon_recursive /data/vendor/hwcdump
