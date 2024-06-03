@@ -352,16 +352,12 @@ on early-fs
     start oeminfo_nvm
 
 on fs
-    mount_all /vendor/etc/fstab.hi3660 --early
+    mount_all /vendor/etc/fstab.hi3660
 
     mkdir /splash2/log 0775 system log
     
     restorecon /sys/class/graphics/fb0/lcd_cabc_mode
     restorecon /sys/class/leds/torch/flash_thermal_protect
-    
-on late-fs
-    # Mount RW partitions which need run fsck
-    mount_all /vendor/etc/fstab.hi3660 --late
     
 on post-fs
     # set RLIMIT_MEMLOCK to 64MB
