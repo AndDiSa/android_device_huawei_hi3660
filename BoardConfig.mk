@@ -24,6 +24,8 @@ TARGET_2ND_CPU_ABI2 := armeabi
 TARGET_2ND_CPU_VARIANT := generic
 TARGET_2ND_CPU_VARIANT_RUNTIME := cortex-a73
 
+TARGET_IS_64_BIT := true
+
 # Assert
 TARGET_OTA_ASSERT_DEVICE := schubert
 
