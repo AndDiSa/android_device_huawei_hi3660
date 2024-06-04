@@ -4,11 +4,6 @@
 # SPDX-License-Identifier: Apache-2.0
 #
 
-# Setup dalvik vm configs
-$(call inherit-product, frameworks/native/build/phone-xhdpi-4096-dalvik-heap.mk)
-# Project ID Quota
-$(call inherit-product, $(SRC_TARGET_DIR)/product/emulated_storage.mk)
-
 # AAPT conf
 PRODUCT_AAPT_CONFIG := normal 
 PRODUCT_AAPT_PREF_CONFIG := xhdpi
@@ -31,7 +26,7 @@ PRODUCT_PACKAGES += \
     libalsautils \
     libaudiopreprocessing \
     libtinycompress
-    
+
 PRODUCT_COPY_FILES += \
     $(LOCAL_PATH)/prebuilts/audio_effects.xml:$(TARGET_COPY_OUT_VENDOR)/etc/audio_effects.xml \
     $(LOCAL_PATH)/prebuilts/audio_policy_configuration.xml:$(TARGET_COPY_OUT_VENDOR)/etc/audio_policy_configuration.xml
@@ -44,11 +39,6 @@ PRODUCT_COPY_FILES += \
     frameworks/av/services/audiopolicy/config/audio_policy_volumes.xml:$(TARGET_COPY_OUT_VENDOR)/etc/audio_policy_volumes.xml \
     frameworks/av/services/audiopolicy/config/default_volume_tables.xml:$(TARGET_COPY_OUT_VENDOR)/etc/default_volume_tables.xml
 
-# Bluetooth
-PRODUCT_PACKAGES += \
-    android.hardware.bluetooth@1.0-impl \
-    android.hardware.bluetooth@1.0-service
-
 # Binder
 PRODUCT_PACKAGES += \
     android.hidl.allocator@1.0.vendor \
@@ -59,7 +49,12 @@ PRODUCT_PACKAGES += \
     libhidltransport.vendor \
     libhwbinder.vendor \
     libhwbinder
-    
+
+# Bluetooth
+PRODUCT_PACKAGES += \
+    android.hardware.bluetooth@1.0-impl \
+    android.hardware.bluetooth@1.0-service
+
 # Camera
 PRODUCT_PACKAGES += \
     android.hardware.camera.provider@2.4-impl
@@ -72,33 +67,33 @@ PRODUCT_PACKAGES += \
 
 PRODUCT_PACKAGES += \
     libui_shim.vendor
-    
+
 # DRM
 PRODUCT_PACKAGES += \
     android.hardware.drm-service.clearkey \
     android.hardware.drm@1.1.vendor
-    
+
 PRODUCT_PACKAGES += \
     libmockdrmcryptoplugin
 
 # Fastbootd
 PRODUCT_PACKAGES += \
     fastbootd
-    
+
 # Fingerprint
 PRODUCT_PACKAGES += \
     vendor.huawei.hardware.biometrics.fingerprint@2.1.vendor
 
 PRODUCT_PACKAGES += \
     vendor.huawei.hardware.hwvibrator@1.0.vendor
-    
+
 PRODUCT_COPY_FILES += \
     $(LOCAL_PATH)/prebuilts/fingerprint.kl:$(TARGET_COPY_OUT_VENDOR)/usr/keylayout/fingerprint.kl
 
 PRODUCT_COPY_FILES += \
     $(LOCAL_PATH)/prebuilts/native_packages.bin:$(TARGET_COPY_OUT_VENDOR)/etc/native_packages.bin \
     $(LOCAL_PATH)/prebuilts/system_native_packages.bin:$(TARGET_COPY_OUT_SYSTEM)/etc/native_packages.bin
-    
+
 # Gatekeeper
 PRODUCT_PACKAGES += \
     android.hardware.gatekeeper@1.0-service \
@@ -107,31 +102,46 @@ PRODUCT_PACKAGES += \
 # GPS/GNSS
 PRODUCT_PACKAGES += \
     android.hardware.gnss@1.1.vendor
-    
+
 PRODUCT_COPY_FILES += \
      $(LOCAL_PATH)/prebuilts/gnss_suplconfig_hisi.xml:$(TARGET_COPY_OUT_SYSTEM)/etc/gnss/config/gnss_suplconfig_hisi.xml \
      $(LOCAL_PATH)/prebuilts/privapp-permissions-supl.xml:$(TARGET_COPY_OUT_SYSTEM)/etc/permissions/privapp-permissions-supl.xml
-    
+
 # Graphics
 PRODUCT_PACKAGES += \
     android.hardware.graphics.allocator@2.0-impl \
     android.hardware.graphics.allocator@2.0-service \
     android.hardware.graphics.composer@2.2-service \
     android.hardware.graphics.mapper@2.0-impl
-    
+
 # Health
 PRODUCT_PACKAGES += \
     android.hardware.health@2.1-impl \
     android.hardware.health@2.1-impl.recovery \
     android.hardware.health@2.1-service
-    
+
+# HIDL
+PRODUCT_ENFORCE_VINTF_MANIFEST_OVERRIDE := true
+
 # Hisi init
 PRODUCT_PACKAGES += \
     hisi_init
-    
-# HIDL
-PRODUCT_ENFORCE_VINTF_MANIFEST_OVERRIDE := true
-    
+
+# Init
+PRODUCT_PACKAGES += \
+    fstab.hi3660 \
+    fstab.hi3660.ramdisk \
+    fstab.modem \
+    init.connectivity.hi3660.rc \
+    init.hi3660.rc \
+    init.modem.hi3660.rc \
+    init.usb.hi3660.rc \
+    ueventd.hi3660.rc
+
+PRODUCT_COPY_FILES += \
+    $(LOCAL_PATH)/prebuilts/make_f2fs:$(TARGET_RECOVERY_OUT)/root/system/bin/make_f2fs \
+    $(LOCAL_PATH)/rootdir/etc/init.recovery.hi3660.rc:$(TARGET_RECOVERY_OUT)/root/init.recovery.hi3660.rc
+
 # Keymaster
 PRODUCT_PACKAGES += \
     android.hardware.keymaster@3.0-service
@@ -140,15 +150,15 @@ PRODUCT_PACKAGES += \
     libkeymaster3device.vendor \
     libkeystore-engine-wifi-hidl \
     libkeystore-wifi-hidl
-    
+
 # Light
 PRODUCT_PACKAGES += \
     android.hardware.light-service.huawei
-    
+
 # Livedisplay
 PRODUCT_PACKAGES += \
     vendor.lineage.livedisplay@2.1-service.hisi
-    
+
 # Media
 PRODUCT_PACKAGES += \
     libmockcasplugin
@@ -162,7 +172,12 @@ PRODUCT_COPY_FILES += \
     frameworks/av/media/libstagefright/data/media_codecs_google_audio.xml:$(TARGET_COPY_OUT_VENDOR)/etc/media_codecs_google_audio.xml \
     frameworks/av/media/libstagefright/data/media_codecs_google_telephony.xml:$(TARGET_COPY_OUT_VENDOR)/etc/media_codecs_google_telephony.xml \
     frameworks/av/media/libstagefright/data/media_codecs_google_video.xml:$(TARGET_COPY_OUT_VENDOR)/etc/media_codecs_google_video.xml
-    
+
+# Memtrack
+PRODUCT_PACKAGES += \
+    android.hardware.memtrack@1.0-impl \
+    android.hardware.memtrack@1.0-service
+
 # Misc
 PRODUCT_PACKAGES += \
     libprotobuf-cpp-lite-v29 \
@@ -173,45 +188,25 @@ PRODUCT_PACKAGES += \
 PRODUCT_PACKAGES += \
     libiawareperf_client \
     libperfgenius_vendor_client
-    
+
 PRODUCT_PACKAGES += \
     vendor.huawei.hardware.perfgenius@2.0.vendor
-    
+
 PRODUCT_PACKAGES += \
     libchrlog \
     libhwlog \
     libimonitor \
     libxcollie
-    
+
 PRODUCT_COPY_FILES += \
     $(LOCAL_PATH)/prebuilts/cfg_sht_hisi.ini:$(TARGET_COPY_OUT_VENDOR)/etc/cfg_sht_hisi.ini \
     $(LOCAL_PATH)/prebuilts/cfg_sht_w09_hisi.ini:$(TARGET_COPY_OUT_VENDOR)/etc/cfg_sht_w09_hisi.ini
-
-# Init
-PRODUCT_PACKAGES += \
-    fstab.hi3660 \
-    fstab.hi3660.ramdisk \
-    fstab.modem \
-    init.connectivity.hi3660.rc \
-    init.hi3660.rc \
-    init.modem.hi3660.rc \
-    init.usb.hi3660.rc \
-    ueventd.hi3660.rc
-    
-PRODUCT_COPY_FILES += \
-    $(LOCAL_PATH)/prebuilts/make_f2fs:$(TARGET_RECOVERY_OUT)/root/system/bin/make_f2fs \
-    $(LOCAL_PATH)/rootdir/etc/init.recovery.hi3660.rc:$(TARGET_RECOVERY_OUT)/root/init.recovery.hi3660.rc
-    
-# Memtrack
-PRODUCT_PACKAGES += \
-    android.hardware.memtrack@1.0-impl \
-    android.hardware.memtrack@1.0-service
 
 # Overlays
 DEVICE_PACKAGE_OVERLAYS += \
     $(LOCAL_PATH)/overlay \
     $(LOCAL_PATH)/overlay-lineage
-    
+
 # Permissions
 PRODUCT_COPY_FILES += \
     frameworks/native/data/etc/android.hardware.bluetooth.xml:$(TARGET_COPY_OUT_VENDOR)/etc/permissions/android.hardware.bluetooth.xml \
@@ -262,7 +257,7 @@ PRODUCT_PACKAGES += \
 PRODUCT_PACKAGES += \
     librilutils \
     libril
-    
+
 PRODUCT_PACKAGES += \
     android.hardware.secure_element@1.0.vendor \
     android.hardware.nfc@1.1.vendor
@@ -283,35 +278,35 @@ PRODUCT_SOONG_NAMESPACES += \
     hardware/google/pixel \
     $(LOCAL_PATH)/resources \
     $(LOCAL_PATH)/resources/power-libperfmgr
-    
+
 # Tee
 PRODUCT_PACKAGES += \
     vendor.huawei.hardware.libteec@2.0 \
     vendor.huawei.hardware.libteec@2.0.vendor
-    
+
 # Thermal
 PRODUCT_PACKAGES += \
     android.hardware.thermal@1.0-impl \
     android.hardware.thermal@1.0-service
-    
+
 # Touch
 PRODUCT_PACKAGES += \
     vendor.lineage.touch@1.0-service.hi3660
-    
+
 # Trust HAL
 PRODUCT_PACKAGES += \
     vendor.lineage.trust@1.0-service
-    
+
 # USB
 PRODUCT_PACKAGES += \
     android.hardware.usb@1.0-service.basic \
     com.android.future.usb.accessory
-    
+
 # Vibrator
 PRODUCT_PACKAGES += \
     android.hardware.vibrator@1.0-impl \
     android.hardware.vibrator@1.0-service
-    
+
 # Vr
 PRODUCT_PACKAGES += \
     android.hardware.vr@1.0-impl \
@@ -336,5 +331,9 @@ PRODUCT_COPY_FILES += \
     $(LOCAL_PATH)/wifi/wpa_supplicant_overlay.conf:$(TARGET_COPY_OUT_VENDOR)/etc/wifi/wpa_supplicant_overlay.conf \
     $(LOCAL_PATH)/wifi/p2p_supplicant_overlay.conf:$(TARGET_COPY_OUT_VENDOR)/etc/wifi/p2p_supplicant_overlay.conf
 
+# Setup dalvik vm configs
+$(call inherit-product, frameworks/native/build/phone-xhdpi-4096-dalvik-heap.mk)
+# Project ID Quota
+$(call inherit-product, $(SRC_TARGET_DIR)/product/emulated_storage.mk)
 # Inherit the proprietary files
 $(call inherit-product, vendor/huawei/schubert/schubert-vendor.mk)
