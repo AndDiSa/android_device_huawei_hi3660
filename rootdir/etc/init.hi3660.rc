@@ -1431,12 +1431,6 @@ service teecd /vendor/bin/teecd
     user root
     group root system readproc
 
-service teelogcat /vendor/bin/tlogcat -f
-    class late_start
-    user root
-    group system
-    disabled
-    
 service oeminfo_nvm /vendor/bin/oeminfo_nvm_server
     class core
     group system readproc root

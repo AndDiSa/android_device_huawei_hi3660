@@ -456,7 +456,6 @@ vendor/lib64/hw/sensors.default.so:vendor/lib64/hw/sensors.hi3660.so
 # TEE (vendor)
 vendor/bin/hw/vendor.huawei.hardware.libteec@2.0-service
 vendor/bin/teecd
-vendor/bin/tlogcat
 vendor/etc/init/vendor.huawei.hardware.libteec@2.0-service.rc
 vendor/etc/native_packages.xml:vendor/etc/native_packages.bin
 vendor/lib/hw/vendor.huawei.hardware.libteec@2.0-impl.so

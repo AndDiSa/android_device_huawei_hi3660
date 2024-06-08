@@ -27,8 +27,7 @@
 /vendor/bin/octty								u:object_r:hal_hisi_connectivity_exec:s0
 /vendor/bin/oeminfo_gamma							u:object_r:hal_oeminfo_nvm_server_exec:s0
 /vendor/bin/oeminfo_nvm_server							u:object_r:hal_oeminfo_nvm_server_exec:s0
-vendor/bin/start_connectivity_hisi						u:object_r:hal_hisi_connectivity_exec:s0
-/vendor/bin/tlogcat								u:object_r:tee_exec:s0
+/vendor/bin/start_connectivity_hisi						u:object_r:hal_hisi_connectivity_exec:s0
 /vendor/bin/teecd								u:object_r:tee_exec:s0
 
 /vendor/bin/hisi_init								u:object_r:hal_hisi_init_exec:s0
