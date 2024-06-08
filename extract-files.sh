@@ -95,6 +95,12 @@ function blob_fixup() {
             "${PATCHELF}" --remove-needed "vendor.huawei.hardware.ai@1.0.so" "${2}"
             "${PATCHELF}" --remove-needed "vendor.huawei.hardware.biometrics.hwsecurefacerecognize@1.0.so" "${2}"
             ;;
+        vendor/lib64/hw/vendor.huawei.hardware.hwdisplay.displayengine@1.2-impl.so)
+            "${PATCHELF}" --replace-needed "displayeffect.kirin970.so" "displayeffect.hi3660.so" "${2}"
+            ;;
+        vendor/lib64/displayeffect.hi3660.so)
+            "${PATCHELF}" --set-soname "displayeffect.hi3660.so" "${2}"
+            ;;
     esac
 }
 

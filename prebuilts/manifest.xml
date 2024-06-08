@@ -247,7 +247,7 @@
     <hal format="hidl">
         <name>vendor.huawei.hardware.graphics.displayeffect</name>
         <transport>hwbinder</transport>
-        <version>1.0</version>
+        <version>1.2</version>
         <interface>
             <name>IEffect</name>
             <instance>default</instance>
@@ -256,7 +256,7 @@
     <hal format="hidl">
         <name>vendor.huawei.hardware.graphics.mediacomm</name>
         <transport>hwbinder</transport>
-        <version>2.0</version>
+        <version>2.1</version>
         <interface>
             <name>IMediaComm</name>
             <instance>default</instance>
