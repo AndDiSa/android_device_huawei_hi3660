@@ -57,6 +57,7 @@ vendor/lib64/hw/hicam.hal.service.so
 vendor/lib64/hw/vendor.huawei.hardware.camera.factory@1.0-impl.so
 vendor/lib64/hwcam/hwcam.ddt.so
 vendor/lib64/hwcam/hwcam.services.so
+odm/lib64/libarcsoft_beautyshot.so:vendor/lib64/libarcsoft_beautyshot.so
 vendor/lib64/libBestShot.so
 vendor/lib64/libcamera_algo.so
 vendor/lib64/libcamerabuffer.so
@@ -92,6 +93,7 @@ vendor/lib64/libLaserSelfCali.so
 vendor/lib64/libmmi_depth.so
 vendor/lib64/libmorpho_effect_library5.so
 vendor/lib64/libmotiondetect.so
+odm/lib64/libmrc_cg_beauty.so:vendor/lib64/libmrc_cg_beauty.so
 vendor/lib64/libmrc_cg_colorfusion.so
 vendor/lib64/libmrc_cg_davinci.so
 vendor/lib64/libmrc_cg_eis_ap.so
@@ -134,8 +136,6 @@ odm/lib64/hwcam/hwcam.hi3660.SHT.s.HI846.so
 odm/lib64/hwcam/hwcam.hi3660.SHT.s.IMX258.so
 odm/lib64/hwcam/hwcam.hi3660.SHT.s.OV8856SHT_OFILM.so
 odm/lib64/hwcam/hwcam.hi3660.SHT.s.OV13855.so
-odm/lib64/libarcsoft_beautyshot.so
-odm/lib64/libmrc_cg_beauty.so
 
 # Charger stock EMUI9.1
 sbin/charger:vendor/bin/hw_charger
