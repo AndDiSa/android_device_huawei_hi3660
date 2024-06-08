@@ -393,7 +393,6 @@ vendor/lib/libstagefrighthw.so
 
 # Oeminfo
 vendor/bin/hisecd
-vendor/bin/oeminfo_gamma
 vendor/bin/oeminfo_nvm_server
 vendor/lib/libconn_factory_test.so
 vendor/lib/lib_device_interface.so
