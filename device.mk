@@ -311,15 +311,6 @@ PRODUCT_PACKAGES += \
     android.hardware.vibrator@1.0-impl \
     android.hardware.vibrator@1.0-service
 
-# Vr
-PRODUCT_PACKAGES += \
-    android.hardware.vr@1.0-impl \
-    android.hardware.vr@1.0-service
-
-PRODUCT_COPY_FILES += \
-    frameworks/native/data/etc/android.hardware.vr.high_performance.xml:$(TARGET_COPY_OUT_VENDOR)/etc/permissions/android.hardware.vr.high_performance.xml \
-    frameworks/native/data/etc/android.software.vr.xml:$(TARGET_COPY_OUT_VENDOR)/etc/permissions/android.software.vr.xml
-
 # WiFi
 PRODUCT_PACKAGES += \
     android.hardware.wifi@1.0-service \
