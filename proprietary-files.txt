@@ -155,8 +155,8 @@ vendor/lib64/libpf_oneimage_hisi.so
 vendor/lib64/libpf_rotate_hisi.so
 
 # DRM
-preavs/bin/hw/android.hardware.drm@1.1-service.widevine:vendor/bin/hw/android.hardware.drm@1.1-service.widevine
-vendor/etc/init/android.hardware.drm@1.1-service.widevine.rc
+preavs/bin/hw/android.hardware.drm@1.2-service.widevine:vendor/bin/hw/android.hardware.drm@1.2-service.widevine
+vendor/etc/init/android.hardware.drm@1.2-service.widevine.rc
 preavs/oemcrypto/liboemcrypto.so:vendor/lib/liboemcrypto.so
 preavs/lib/libwvhidl.so:vendor/lib/libwvhidl.so
 

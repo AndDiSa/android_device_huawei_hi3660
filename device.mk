@@ -74,7 +74,7 @@ PRODUCT_PACKAGES += \
 # DRM
 PRODUCT_PACKAGES += \
     android.hardware.drm-service.clearkey \
-    android.hardware.drm@1.1.vendor
+    android.hardware.drm@1.2.vendor
 
 PRODUCT_PACKAGES += \
     libmockdrmcryptoplugin
