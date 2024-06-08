@@ -94,8 +94,7 @@ PRODUCT_COPY_FILES += \
     $(LOCAL_PATH)/prebuilts/fingerprint.kl:$(TARGET_COPY_OUT_VENDOR)/usr/keylayout/fingerprint.kl
 
 PRODUCT_COPY_FILES += \
-    $(LOCAL_PATH)/prebuilts/native_packages.bin:$(TARGET_COPY_OUT_VENDOR)/etc/native_packages.bin \
-    $(LOCAL_PATH)/prebuilts/system_native_packages.bin:$(TARGET_COPY_OUT_SYSTEM)/etc/native_packages.bin
+    $(LOCAL_PATH)/prebuilts/native_packages.bin:$(TARGET_COPY_OUT_VENDOR)/etc/native_packages.bin
 
 # Gatekeeper
 PRODUCT_PACKAGES += \

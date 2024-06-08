@@ -453,18 +453,6 @@ vendor/lib64/ese_hw_hal.so
 # Sensors
 vendor/lib64/hw/sensors.default.so:vendor/lib64/hw/sensors.hi3660.so
 
-# TEE (system)
-system/bin/tee_auth_daemon
-system/etc/native_packages.xml:system/etc/native_packages.bin
-system/lib/libc_secshared.so
-system/lib/libteec_client.so
-system/lib/libteeclientjni.so
-system/lib/libtuidaemon.so
-system/lib64/libc_secshared.so
-system/lib64/libteec_client.so
-system/lib64/libteeclientjni.so
-system/lib64/libtuidaemon.so
-
 # TEE (vendor)
 vendor/bin/hw/vendor.huawei.hardware.libteec@2.0-service
 vendor/bin/teecd

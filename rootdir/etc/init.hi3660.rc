@@ -1426,13 +1426,6 @@ service hivwserver /vendor/bin/hivwserver
     user system
     group audio inet net_bt net_bt_admin net_bw_acct system
     
-service teeauth /system/bin/tee_auth_daemon
-    socket tui_daemon stream 660 root system
-    socket tee-multi-user stream 660 root system
-    class core
-    user root
-    group root system readproc
-
 service teecd /vendor/bin/teecd
     class early_hal
     user root
