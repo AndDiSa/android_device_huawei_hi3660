@@ -430,9 +430,12 @@ vendor/lib64/libril.so:vendor/lib64/libril-hisi.so
 vendor/lib64/lib_wifi_sar.so
 vendor/lib64/vendor.huawei.hardware.hisiradio@1.0.so
 vendor/lib64/vendor.huawei.hardware.hisiradio@1.1.so
+vendor/lib64/vendor.huawei.hardware.hisiradio@1.2.so
 vendor/lib64/vendor.huawei.hardware.radio.chr@1.0.so
 vendor/lib64/vendor.huawei.hardware.radio.deprecated@1.0.so
 vendor/lib64/vendor.huawei.hardware.radio.ims@1.0.so
+vendor/lib64/vendor.huawei.hardware.radio.ims@1.1.so
+vendor/lib64/vendor.huawei.hardware.radio.ims@1.2.so
 vendor/lib64/vendor.huawei.hardware.radio@2.0.so
 vendor/phone.prop
 
