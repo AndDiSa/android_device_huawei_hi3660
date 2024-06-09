@@ -1238,8 +1238,6 @@ on boot
     chown system system /sys/class/leds/blue/brightness
     chown system system /sys/class/leds/blue/delay_off
     chown system system /sys/class/leds/blue/delay_on
-    mkdir /data/vendor/log/fingerprint
-    chown system system /data/vendor/log/fingerprint
 
     #add for fingerprint
     chmod 0660 /dev/fingerprint
@@ -1267,6 +1265,10 @@ on boot
     chown system system /sys/devices/platform/fingerprint/low_temperature
     chmod 0660 /sys/devices/platform/fingerprint/ud_fingerprint_chip_info
     chown system system /sys/devices/platform/fingerprint/ud_fingerprint_chip_info
+    
+    mkdir /data/vendor/log/fingerprint
+    chown system system /data/vendor/log/fingerprint
+    write /sys/devices/platform/fingerprint/nav 1
 
     #LRA vibrator
     chown system system /sys/class/timed_output/vibrator/vibrator_dbc_test
