@@ -1,4 +1,4 @@
-# file contexts schubert/hi3660
+# file contexts hi3660
 
 /vendor/bin/hw/android.hardware.audio.service.hisi 				u:object_r:hal_audio_default_exec:s0
 /vendor/bin/hw/android.hardware.drm@1.2-service.widevine			u:object_r:hal_drm_default_exec:s0

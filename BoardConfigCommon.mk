@@ -4,7 +4,7 @@
 # SPDX-License-Identifier: Apache-2.0
 #
 
-DEVICE_PATH := device/huawei/schubert
+COMMON_PATH := device/huawei/hi3660
 
 # APEX
 OVERRIDE_TARGET_FLATTEN_APEX := true
@@ -26,10 +26,9 @@ TARGET_2ND_CPU_VARIANT_RUNTIME := cortex-a73
 
 TARGET_IS_64_BIT := true
 
-# Assert
-TARGET_OTA_ASSERT_DEVICE := schubert
-
 # Bootanimation
+TARGET_SCREEN_HEIGHT := 2560
+TARGET_SCREEN_WIDTH := 1600
 TARGET_BOOTANIMATION_HALF_RES := true
 
 # Bootloader
@@ -48,7 +47,7 @@ BUILD_BROKEN_DUP_RULES := true
 TARGET_SCREEN_DENSITY := 420
 
 # Init
-TARGET_INIT_VENDOR_LIB := //$(DEVICE_PATH)/resources:init_hisi
+TARGET_INIT_VENDOR_LIB := //$(COMMON_PATH)/resources:init_hisi
 TARGET_RECOVERY_DEVICE_MODULES := init_hisi
 
 # Kernel
@@ -66,11 +65,11 @@ BOARD_MKBOOTIMG_ARGS := --kernel_offset $(BOARD_KERNEL_OFFSET) --ramdisk_offset 
 
 BOARD_CUSTOM_BOOTIMG := true
 BOARD_CUSTOM_BOOTIMG_HAS_RAMDISK := false
-BOARD_CUSTOM_BOOTIMG_MK := $(DEVICE_PATH)/resources/mkbootimg.mk
+BOARD_CUSTOM_BOOTIMG_MK := $(COMMON_PATH)/resources/mkbootimg.mk
 
 BOARD_KERNEL_IMAGE_NAME := Image.gz
 TARGET_KERNEL_SOURCE := kernel/huawei/hi3660
-TARGET_KERNEL_CONFIG := hisi3660_defconfig modem.config
+TARGET_KERNEL_CONFIG := hisi3660_defconfig
 
 TARGET_KERNEL_CLANG_VERSION := r416183b
 TARGET_KERNEL_CLANG_PATH := $(abspath .)/prebuilts/clang/kernel/$(HOST_PREBUILT_TAG)/clang-$(TARGET_KERNEL_CLANG_VERSION)
@@ -100,15 +99,15 @@ TARGET_USERIMAGES_USE_F2FS := true
 BOARD_FLASH_BLOCK_SIZE := 131072 #(BOARD_KERNEL_PAGESIZE * 64)
 
 # Properties
-TARGET_VENDOR_PROP += $(DEVICE_PATH)/vendor.prop
+TARGET_VENDOR_PROP += $(COMMON_PATH)/vendor.prop
 
 # Recovery
-TARGET_RECOVERY_FSTAB := $(DEVICE_PATH)/rootdir/fstab.hi3660
+TARGET_RECOVERY_FSTAB := $(COMMON_PATH)/rootdir/fstab.hi3660
 TARGET_RECOVERY_PIXEL_FORMAT := "BGRA_8888"
 BOARD_USES_FULL_RECOVERY_IMAGE := true
 
 # Releasetools
-TARGET_RELEASETOOLS_EXTENSIONS := $(DEVICE_PATH)/resources/releasetools
+TARGET_RELEASETOOLS_EXTENSIONS := $(COMMON_PATH)/resources/releasetools
 
 # RIL
 BOARD_PROVIDES_LIBRIL := true
@@ -129,14 +128,14 @@ BOARD_ROOT_EXTRA_SYMLINKS += \
 
 # SEPolicy
 SELINUX_IGNORE_NEVERALLOWS := true
-BOARD_VENDOR_SEPOLICY_DIRS += $(DEVICE_PATH)/sepolicy/vendor
+BOARD_VENDOR_SEPOLICY_DIRS += $(COMMON_PATH)/sepolicy/vendor
 
 # Vendor Security patch level
 VENDOR_SECURITY_PATCH := 2022-07-05
 
 # Vintf
-DEVICE_MANIFEST_FILE := $(DEVICE_PATH)/prebuilts/manifest.xml
-DEVICE_MATRIX_FILE := $(DEVICE_PATH)/prebuilts/compatibility_matrix.xml
+DEVICE_MANIFEST_FILE := $(COMMON_PATH)/prebuilts/manifest.xml
+DEVICE_MATRIX_FILE := $(COMMON_PATH)/prebuilts/compatibility_matrix.xml
 
 # VNDK
 PRODUCT_FULL_TREBLE_OVERRIDE := true
