@@ -204,6 +204,8 @@ PRODUCT_PACKAGES += \
     libxcollie
 
 PRODUCT_COPY_FILES += \
+    $(LOCAL_PATH)/prebuilts/cfg_cmr_hisi.ini:$(TARGET_COPY_OUT_VENDOR)/etc/cfg_cmr_hisi.ini \
+    $(LOCAL_PATH)/prebuilts/cfg_cmr_w09_hisi.ini:$(TARGET_COPY_OUT_VENDOR)/etc/cfg_cmr_w09_hisi.ini \
     $(LOCAL_PATH)/prebuilts/cfg_sht_hisi.ini:$(TARGET_COPY_OUT_VENDOR)/etc/cfg_sht_hisi.ini \
     $(LOCAL_PATH)/prebuilts/cfg_sht_w09_hisi.ini:$(TARGET_COPY_OUT_VENDOR)/etc/cfg_sht_w09_hisi.ini
 
