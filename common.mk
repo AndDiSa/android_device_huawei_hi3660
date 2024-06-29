@@ -264,20 +264,6 @@ PRODUCT_COPY_FILES += \
     system/core/libprocessgroup/profiles/cgroups_28.json:$(TARGET_COPY_OUT_VENDOR)/etc/cgroups.json \
     system/core/libprocessgroup/profiles/task_profiles_28.json:$(TARGET_COPY_OUT_VENDOR)/etc/task_profiles.json
 
-# Radio
-PRODUCT_PACKAGES += \
-    android.hardware.radio.deprecated@1.0.vendor \
-    android.hardware.radio.config@1.2.vendor \
-    android.hardware.radio@1.4.vendor
-
-PRODUCT_PACKAGES += \
-    librilutils \
-    libril
-
-PRODUCT_PACKAGES += \
-    android.hardware.secure_element@1.0.vendor \
-    android.hardware.nfc@1.1.vendor
-
 # RRO
 PRODUCT_ENFORCE_RRO_TARGETS := *
 
