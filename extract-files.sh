@@ -91,7 +91,7 @@ function blob_fixup() {
             sed -i 's/GB2312/iso-8859-1/g' "${2}"
             sed -i 's/xmlversion/xml version/g' "${2}"
             ;;
-        odm/lib64/hwcam/hwcam.hi3660.m.SHT.so)
+        odm/lib64/hwcam/hwcam.hi3660.m.SHT.so|odm/lib64/hwcam/hwcam.hi3660.m.CMR.so)
             "${PATCHELF}" --remove-needed "vendor.huawei.hardware.ai@1.0.so" "${2}"
             "${PATCHELF}" --remove-needed "vendor.huawei.hardware.biometrics.hwsecurefacerecognize@1.0.so" "${2}"
             ;;
