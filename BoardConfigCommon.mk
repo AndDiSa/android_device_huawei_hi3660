@@ -111,15 +111,7 @@ TARGET_RELEASETOOLS_EXTENSIONS := $(COMMON_PATH)/resources/releasetools
 
 # Root
 BOARD_ROOT_EXTRA_FOLDERS += \
-    3rdmodem \
-    3rdmodemnvm \
-    3rdmodemnvmbkp \
-    modem_log \
-    sec_storage \
-    splash2
-    
-BOARD_ROOT_EXTRA_SYMLINKS += \
-	/odm/hw_odm:/hw_odm
+    sec_storage
 
 # SEPolicy
 SELINUX_IGNORE_NEVERALLOWS := true

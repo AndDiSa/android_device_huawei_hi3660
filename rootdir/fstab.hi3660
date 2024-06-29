@@ -11,7 +11,6 @@
 
 /dev/block/by-name/cache         			/cache                ext4      rw,nosuid,nodev,noatime,data=ordered wait,check
 /dev/block/by-name/misc       				/misc      emmc      defaults        defaults
-/dev/block/by-name/splash2    				/splash2   ext4     rw,nosuid,nodev,noatime,data=ordered,context=u:object_r:splash_data_file:s0 wait,check,nofail
 /dev/block/by-name/oeminfo   				/oeminfo   emmc     defaults     first_stage_mount
 /dev/block/by-name/secure_storage 			/sec_storage ext4 rw,nosuid,nodev,noatime,auto_da_alloc,mblk_io_submit,data=journal,context=u:object_r:teecd_data_file:s0 wait,nofail
 

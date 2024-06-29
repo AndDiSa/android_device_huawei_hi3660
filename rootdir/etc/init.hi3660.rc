@@ -8,7 +8,7 @@
 #
 
 import /vendor/etc/init/hw/init.connectivity.hi3660.rc
-import /vendor/etc/init/hw/init.modem.hi3660.rc
+import /vendor/etc/init/hw/init.${ro.product.vendor.device}.rc
 import /vendor/etc/init/hw/init.usb.hi3660.rc
 
 on early-init
@@ -353,8 +353,6 @@ on early-fs
 
 on fs
     mount_all /vendor/etc/fstab.hi3660
-
-    mkdir /splash2/log 0775 system log
     
     restorecon /sys/class/graphics/fb0/lcd_cabc_mode
     restorecon /sys/class/leds/torch/flash_thermal_protect
@@ -393,31 +391,6 @@ on post-fs-data
 
     chmod 0660 /dev/smartpakit
     chown media media /dev/smartpakit
-    
-    mkdir /splash2/sim 0770 root system
-    mkdir /splash2/sim/offlinelogs 0770 root system
-    write /splash2/sim/offlinelogs/balong_modem1_simoffline.txt  0
-    write /splash2/sim/offlinelogs/balong_modem2_simoffline.txt  0
-    write /splash2/sim/offlinelogs/balong_modem3_simoffline.txt  0
-    write /splash2/sim/offlinelogs/slot1_simoffline.txt  0
-    write /splash2/sim/sim_pin_file.bin  ""
-    write /splash2/sim/pin_key_file.bin  ""
-
-    chmod 0660 /splash2/sim/offlinelogs/balong_modem1_simoffline.txt
-    chmod 0660 /splash2/sim/offlinelogs/balong_modem2_simoffline.txt
-    chmod 0660 /splash2/sim/offlinelogs/balong_modem3_simoffline.txt
-    chmod 0660 /splash2/sim/offlinelogs/slot1_simoffline.txt
-    chmod 0660 /splash2/sim/sim_pin_file.bin
-    chmod 0660 /splash2/sim/pin_key_file.bin
-
-    chown radio system /splash2/sim/offlinelogs/balong_modem1_simoffline.txt
-    chown radio system /splash2/sim/offlinelogs/balong_modem2_simoffline.txt
-    chown radio system /splash2/sim/offlinelogs/balong_modem3_simoffline.txt
-    chown radio system /splash2/sim/offlinelogs/slot1_simoffline.txt
-    chown root  radio  /splash2/sim/sim_pin_file.bin
-    chown root  radio  /splash2/sim/pin_key_file.bin
-
-    symlink /splash2/sim/offlinelogs /data/offlinelogs
 
     mkdir /data/vendor/camera
     chown media camera /data/vendor/camera
@@ -445,11 +418,6 @@ on post-fs-data
     chown system system /data/vendor/misc/oma
     restorecon_recursive /data/vendor/misc/oma
 
-    mkdir /splash2/storage
-    chmod 0770 /splash2/storage
-    chown root system /splash2/storage
-    restorecon_recursive /splash2/storage
-
     mkdir /data/vendor/log
     chmod 775 /data/vendor/log
     chown root root /data/vendor/log
@@ -472,15 +440,6 @@ on post-fs-data
     mkdir /data/vendor/log/tp_data
     chown root system /data/vendor/log/tp_data
     chmod 0775 /data/vendor/log/tp_data
-
-    mkdir /splash2/reliability
-    chmod 0775 /splash2/reliability
-    chown root system /splash2/reliability
-
-    mkdir /splash2/reliability/boot_fail
-    chmod 0775 /splash2/reliability/boot_fail
-    chown root system /splash2/reliability/boot_fail
-    restorecon_recursive /splash2/reliability
 
     mkdir /data/vendor/log/isp-log
     chmod 0775 /data/vendor/log/isp-log
@@ -693,15 +652,6 @@ on boot
     chmod 664 /sys/class/camerafs/ois/ois_check
     chown system system /sys/class/camerafs/ois/ois_icnum
     chmod 664 /sys/class/camerafs/ois/ois_icnum
-
-    # DTS2017041402245 w00180399 20170508 begin
-    chown root radio /sys/kernel/sim/sim0_hotplug_state
-    chown root radio /sys/kernel/sim/sim1_hotplug_state
-    chown root radio /sys/kernel/sim/sim2_hotplug_state
-    chown root radio /sys/kernel/sim/sim_hotplug_state
-
-    write /splash2/sim/sim_pin_file.bin  "000000"
-    # DTS2017041402245 w00180399 20170508 end
 
     chown system system /sys/class/leds/lcd_backlight0/brightness
     chmod 644 /sys/class/leds/lcd_backlight0/brightness

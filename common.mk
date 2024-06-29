@@ -144,10 +144,8 @@ PRODUCT_PACKAGES += \
 PRODUCT_PACKAGES += \
     fstab.hi3660 \
     fstab.hi3660.ramdisk \
-    fstab.modem \
     init.connectivity.hi3660.rc \
     init.hi3660.rc \
-    init.modem.hi3660.rc \
     init.usb.hi3660.rc \
     ueventd.hi3660.rc
 
@@ -317,8 +315,7 @@ PRODUCT_PACKAGES += \
     wpa_supplicant.conf
 
 PRODUCT_PACKAGES += \
-    WifiOverlay \
-    TetheringConfigOverlay
+    WifiOverlay
 
 PRODUCT_COPY_FILES += \
     $(LOCAL_PATH)/wifi/wpa_supplicant_overlay.conf:$(TARGET_COPY_OUT_VENDOR)/etc/wifi/wpa_supplicant_overlay.conf \

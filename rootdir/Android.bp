@@ -13,12 +13,6 @@ prebuilt_etc {
 }
 
 prebuilt_etc {
-    name: "fstab.modem",
-    src: "fstab.modem",
-    vendor: true,
-}
-
-prebuilt_etc {
     name: "init.connectivity.hi3660.rc",
     src: "etc/init.connectivity.hi3660.rc",
     sub_dir: "init/hw",
@@ -28,13 +22,6 @@ prebuilt_etc {
 prebuilt_etc {
     name: "init.hi3660.rc",
     src: "etc/init.hi3660.rc",
-    sub_dir: "init/hw",
-    vendor: true,
-}
-
-prebuilt_etc {
-    name: "init.modem.hi3660.rc",
-    src: "etc/init.modem.hi3660.rc",
     sub_dir: "init/hw",
     vendor: true,
 }

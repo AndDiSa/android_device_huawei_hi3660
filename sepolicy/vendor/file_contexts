@@ -30,25 +30,11 @@
 
 /vendor/bin/hisi_init								u:object_r:hal_hisi_init_exec:s0
 
-# Mount points
-/3rdmodem(/.*)?                                 				u:object_r:modem_file:s0
-/3rdmodemnvm(/.*)?                              				u:object_r:modem_file:s0
-/3rdmodemnvmbkp(/.*)?                           				u:object_r:modem_file:s0
-/modem_log(/.*)?                                				u:object_r:modem_file:s0
-/mnt/modem/mnvm2:0(/.*)?                        				u:object_r:modem_file:s0
-/mnt/modem/modem_secure(/.*)?                   				u:object_r:modem_file:s0
-/vendor/modem/modem_fw(/.*)?                    				u:object_r:modem_vendor_file:s0
-
 /sec_storage(/.*)?                              				u:object_r:teecd_data_file:s0
 /data/sec_storage_data(/.*)?                    				u:object_r:teecd_data_file:s0
 /data/sec_storage_data_users(/.*)?              				u:object_r:teecd_data_file:s0
 /data/vendor/sec_storage_data(/.*)?             				u:object_r:vendor_teecd_data_file:s0
 /data/vendor/sec_storage_data_users(/.*)?       				u:object_r:vendor_teecd_data_file:s0
-/splash2(/.*)?                                  				u:object_r:splash_data_file:s0
 
 # /dev
 /dev/tc_ns_client                               				u:object_r:teecd_device:s0
-
-/odm/hw_odm/[^/]+/ncfg(/.*)?							u:object_r:ncfg_nv_file:s0
-/hw_odm(/.*)?          								u:object_r:ncfg_nv_file:s0
-/hw_odm/[^/]+/ncfg(/.*)?							u:object_r:ncfg_nv_file:s0
