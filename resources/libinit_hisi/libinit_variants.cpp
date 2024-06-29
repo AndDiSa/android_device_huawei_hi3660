@@ -93,12 +93,20 @@ ProductInfo ReadProductInfo() {
 
 void load_variants() {
     ProductInfo product_info = ReadProductInfo();
+    std::string check_model;
 
     // Load the phone model dynamically from the oeminfo partition.
     if (!product_info.model.empty()) {
         LOG(INFO) << "Found product info: " << product_info.model << " " << product_info.version
                   << " " << product_info.region_type;
         set_ro_build_prop("model", product_info.model, true);
+        for (int i = 0; i < 3; i++)
+        	check_model.push_back(product_info.model[i]);
+        if (check_model == "SHT") {
+        	set_ro_build_prop("camera_product", "SHT", true);
+        } else if (check_model == "CMR") {
+        	set_ro_build_prop("camera_product", "CMR", true);
+        }
     } else {
         LOG(ERROR) << "Unable to parse product information!";
     }
