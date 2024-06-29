@@ -167,6 +167,16 @@ odm/lib64/hwcam/hwcam.hi3660.SHT.s.HI846.so
 odm/lib64/hwcam/hwcam.hi3660.SHT.s.IMX258.so
 odm/lib64/hwcam/hwcam.hi3660.SHT.s.OV8856SHT_OFILM.so
 odm/lib64/hwcam/hwcam.hi3660.SHT.s.OV13855.so
+# Cameron hwcam
+odm/lib64/hwcam/hwcam.hi3660.CMR.p.HI846.so
+odm/lib64/hwcam/hwcam.hi3660.CMR.p.IMX258.so
+odm/lib64/hwcam/hwcam.hi3660.CMR.p.OV13855.so
+odm/lib64/hwcam/hwcam.hi3660.CMR.p.OV8856SHT_OFILM.so
+odm/lib64/hwcam/hwcam.hi3660.CMR.s.HI846.so
+odm/lib64/hwcam/hwcam.hi3660.CMR.s.IMX258.so
+odm/lib64/hwcam/hwcam.hi3660.CMR.s.OV13855.so
+odm/lib64/hwcam/hwcam.hi3660.CMR.s.OV8856SHT_OFILM.so
+odm/lib64/hwcam/hwcam.hi3660.m.CMR.so
 
 # Charger stock EMUI9.1
 sbin/charger:vendor/bin/hw_charger
