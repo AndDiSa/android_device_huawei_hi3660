@@ -281,6 +281,23 @@ odm/etc/firmware/ts/schubert_parade_SCHU31180_toptouch_tianma.bin
 odm/etc/firmware/ts/schubert_parade_SCHU31180_toptouch_tianma_limits.csv
 odm/etc/firmware/ts/schubert_parade_SCHU31180_toptouch_truly.bin
 odm/etc/firmware/ts/schubert_parade_SCHU31180_toptouch_truly_limits.csv
+# Cameron firmware
+odm/etc/firmware/ts/cameron_mxt1066t2_CAME55020_config.raw
+odm/etc/firmware/ts/cameron_mxt1066t2_CAME55020_firmware.fw
+odm/etc/firmware/ts/cameron_mxt1066t2_CAME55020_threshold.csv
+odm/etc/firmware/ts/cameron_mxt1066t2_NULL_config.raw
+odm/etc/firmware/ts/cameron_mxt1066t2_NULL_firmware.fw
+odm/etc/firmware/ts/cameron_parade_CAME31010_eely.bin
+odm/etc/firmware/ts/cameron_parade_CAME31010_eely_limits.csv
+odm/etc/firmware/ts/cameron_W9015_CAME58000_ofilm_boe.csv
+odm/etc/firmware/ts/cameron_W9015_CAME58000_ofilm_boe.hex
+odm/etc/firmware/ts/cameron_W9015_CAME58000_ofilm_inx.csv
+odm/etc/firmware/ts/cameron_W9015_CAME58000_ofilm_inx.hex
+odm/etc/firmware/ts/cameron_W9015_CAME58001_ofilm_boe.csv
+odm/etc/firmware/ts/cameron_W9015_CAME58001_ofilm_inx.csv
+odm/etc/firmware/ts/cameron_W9015_CAME58050_junda_boe.csv
+odm/etc/firmware/ts/cameron_W9015_CAME58050_junda_inx.csv
+odm/etc/firmware/ts/cameron_W9015_cameron_wacom.hex
 
 # Gatekeeper
 vendor/lib/hw/gatekeeper.hi3660.so
