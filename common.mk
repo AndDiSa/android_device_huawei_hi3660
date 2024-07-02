@@ -252,9 +252,6 @@ PRODUCT_COPY_FILES += \
     frameworks/native/data/etc/android.software.verified_boot.xml:$(TARGET_COPY_OUT_VENDOR)/etc/permissions/android.software.verified_boot.xml
 
 # Power
-PRODUCT_PACKAGES += \
-    android.hardware.power-service.huawei-libperfmgr
-
 PRODUCT_COPY_FILES += \
     $(LOCAL_PATH)/prebuilts/powerhint.json:$(TARGET_COPY_OUT_VENDOR)/etc/powerhint.json
 
@@ -276,8 +273,7 @@ PRODUCT_SOONG_NAMESPACES += \
     $(LOCAL_PATH) \
     hardware/google/interfaces \
     hardware/google/pixel \
-    $(LOCAL_PATH)/resources \
-    $(LOCAL_PATH)/resources/power-libperfmgr
+    $(LOCAL_PATH)/resources
 
 # Tee
 PRODUCT_PACKAGES += \
