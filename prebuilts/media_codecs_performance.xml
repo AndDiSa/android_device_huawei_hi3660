@@ -21,12 +21,13 @@
             <Limit name="measured-frame-rate-1280x720" range="74-175" />
             <Limit name="measured-frame-rate-1920x1080" range="42-97" />
         </MediaCodec>
-	    <MediaCodec name="OMX.hisi.video.encoder.hevc" type="video/hevc" update="true">
-            <Limit name="measured-frame-rate-320x240" range="300-600" />
-            <Limit name="measured-frame-rate-640x360" range="442-442" />
-            <Limit name="measured-frame-rate-720x480" range="166-367" />
-            <Limit name="measured-frame-rate-1280x720" range="59-190" />
+	<MediaCodec name="OMX.hisi.video.encoder.hevc" type="video/hevc" update="true">
+            <Limit name="measured-frame-rate-320x240" range="442-600" />
+            <Limit name="measured-frame-rate-640x360" range="367-442" />
+            <Limit name="measured-frame-rate-720x480" range="190-367" />
+            <Limit name="measured-frame-rate-1280x720" range="91-190" />
             <Limit name="measured-frame-rate-1920x1080" range="91-91" />
+            <Limit name="measured-frame-rate-3840x2160" range="42-42" />
 	    </MediaCodec>
         <MediaCodec name="OMX.google.h264.encoder" type="video/avc" update="true">
             <Limit name="measured-frame-rate-320x240" range="340-640" />
