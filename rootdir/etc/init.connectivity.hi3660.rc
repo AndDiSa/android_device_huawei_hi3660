@@ -97,12 +97,6 @@ service watchlssd /vendor/bin/gnss_watchlssd_thirdparty
     group system inet net_raw wakelock
     disabled
     
-service gpsdaemon /vendor/bin/gpsdaemon
-    class main
-    user root
-    group system inet root wakelock
-    oneshot
-    
 on property:sys.conn_macs.ready=1
     # Bluetooth
     chown bluetooth bluetooth /data/vendor/bluedroid/macbt
