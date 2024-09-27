@@ -14,7 +14,7 @@ $(call inherit-product, $(SRC_TARGET_DIR)/product/emulated_storage.mk)
 
 # AAPT conf
 PRODUCT_AAPT_CONFIG := normal 
-PRODUCT_AAPT_PREF_CONFIG := xhdpi
+PRODUCT_AAPT_PREF_CONFIG := xxhdpi
 PRODUCT_CHARACTERISTICS := tablet
 
 # Audio
@@ -61,6 +61,10 @@ PRODUCT_PACKAGES += \
 PRODUCT_PACKAGES += \
     android.hardware.bluetooth@1.0-impl \
     android.hardware.bluetooth@1.0-service
+
+# Bootanimation
+TARGET_SCREEN_HEIGHT := 2560
+TARGET_SCREEN_WIDTH := 1600
 
 # Camera
 PRODUCT_PACKAGES += \
