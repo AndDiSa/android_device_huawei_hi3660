@@ -18,10 +18,12 @@ PRODUCT_AAPT_PREF_CONFIG := xxhdpi
 PRODUCT_CHARACTERISTICS := tablet
 
 # Audio
+$(call soong_config_set,android_hardware_audio,run_64bit,true)
+
 PRODUCT_PACKAGES += \
     android.hardware.audio@4.0-impl \
     android.hardware.audio.effect@4.0-impl \
-    android.hardware.audio.service.hisi \
+    android.hardware.audio.service \
     android.hardware.bluetooth.audio-impl
 
 PRODUCT_PACKAGES += \
