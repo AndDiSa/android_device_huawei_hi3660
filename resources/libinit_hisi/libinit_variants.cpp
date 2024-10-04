@@ -102,11 +102,7 @@ void load_variants() {
         set_ro_build_prop("model", product_info.model, true);
         for (int i = 0; i < 3; i++)
         	check_model.push_back(product_info.model[i]);
-        if (check_model == "SHT") {
-        	set_ro_build_prop("camera_product", "SHT", true);
-        } else if (check_model == "CMR") {
-        	set_ro_build_prop("camera_product", "CMR", true);
-        }
+        set_ro_build_prop("camera_product", check_model, true);
     } else {
         LOG(ERROR) << "Unable to parse product information!";
     }
