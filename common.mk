@@ -323,17 +323,15 @@ PRODUCT_PACKAGES += \
 
 # WiFi
 PRODUCT_PACKAGES += \
-    android.hardware.wifi@1.0-service \
-    hostapd \
-    wpa_supplicant \
-    wpa_supplicant.conf
+    android.hardware.wifi@1.3.vendor \
+    android.hardware.wifi.hostapd@1.1.vendor \
+    android.hardware.wifi.supplicant@1.2.vendor
 
 PRODUCT_PACKAGES += \
     WifiOverlay
 
 PRODUCT_COPY_FILES += \
-    $(LOCAL_PATH)/wifi/wpa_supplicant_overlay.conf:$(TARGET_COPY_OUT_VENDOR)/etc/wifi/wpa_supplicant_overlay.conf \
-    $(LOCAL_PATH)/wifi/p2p_supplicant_overlay.conf:$(TARGET_COPY_OUT_VENDOR)/etc/wifi/p2p_supplicant_overlay.conf
+    $(call find-copy-subdir-files,*,$(LOCAL_PATH)/resources/wifi/,$(TARGET_COPY_OUT_VENDOR)/etc/wifi)
 
 PRODUCT_GMS_CLIENTID_BASE := android-huawei
 
