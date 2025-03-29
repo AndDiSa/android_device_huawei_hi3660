@@ -223,23 +223,6 @@ on init
     write /sys/module/dm_bufio/parameters/retain_ajust_ratio 70
     write /sys/module/dm_bufio/parameters/max_cache_size_bytes 383385600
 
-    # Create cgroup mount points for process groups
-    mkdir /dev/cpuctl
-    mount cgroup none /dev/cpuctl cpu
-    chown system system /dev/cpuctl
-    chown system system /dev/cpuctl/tasks
-    chmod 0666 /dev/cpuctl/tasks
-    write /dev/cpuctl/cpu.shares 1024
-    write /dev/cpuctl/cpu.rt_runtime_us 800000
-    write /dev/cpuctl/cpu.rt_period_us 1000000
-
-    mkdir /dev/cpuctl/limit
-    chown system system /dev/cpuctl/limit/tasks
-    chmod 0644 /dev/cpuctl/limit/tasks
-    write /dev/cpuctl/limit/cpu.shares 1024
-    write /dev/cpuctl/limit/cpu.rt_runtime_us 800000
-    write /dev/cpuctl/limit/cpu.rt_period_us 1000000
-
     # sets up initial blkio for ActivityManger
     mkdir /dev/blkio
     mount cgroup none /dev/blkio blkio
