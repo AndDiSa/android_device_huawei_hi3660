@@ -23,38 +23,13 @@ on init
     wait /dev/nve0
     chmod 0770 /dev/nve0
     chown root system /dev/nve0
-    
-    # sets up initial workingset cgroup
-    mkdir /dev/workingset
-    mount cgroup none /dev/workingset nodev noexec nosuid workingset
-    mkdir /dev/workingset/monitor0
-    mkdir /dev/workingset/monitor1
 
-    chmod 0600 /dev/workingset/tasks
-    chmod 0600 /dev/workingset/monitor0/tasks
-    chmod 0600 /dev/workingset/monitor1/tasks
-    chmod 0600 /dev/workingset/cgroup.procs
-    chmod 0600 /dev/workingset/monitor0/cgroup.procs
-    chmod 0600 /dev/workingset/monitor1/cgroup.procs
-    chmod 0600 /dev/workingset/monitor0/workingset.state
-    chmod 0600 /dev/workingset/monitor1/workingset.state
-    chmod 0600 /dev/workingset/monitor0/workingset.data
-    chmod 0600 /dev/workingset/monitor1/workingset.data
-    
-    mkdir /dev/frz
-    mount cgroup none /dev/frz freezer
-    chmod 0775 /dev/frz
-    
     #log
     chmod 0660 /dev/hwlog_switch
     chown logd system /dev/hwlog_switch
 
-    mkdir /dev/frz/aware_frozen
-    chmod 0770 /dev/frz/aware_frozen
-    chown root root /dev/frz/aware_frozen
-    
     chmod 0400 /dev/hisi_teelog
-    
+
     # for audio
     chmod 0660 /dev/maxim_smartpa_dev
     chown media media /dev/maxim_smartpa_dev
