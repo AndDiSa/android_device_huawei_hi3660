@@ -1338,11 +1338,6 @@ service vendor.charger /vendor/bin/hw_charger -p
     capabilities SYS_BOOT
     seclabel u:r:charger:s0
     
-service hivwserver /vendor/bin/hivwserver
-    class vowifi
-    user system
-    group audio inet net_bt net_bt_admin net_bw_acct system
-    
 service teecd /vendor/bin/teecd
     class early_hal
     user root
@@ -1390,9 +1385,6 @@ on property:ro.runmode=normal
     write /sys/class/hw_power/charger/charge_data/iin_thermal 900
     write /sys/class/hw_power/charger/direct_charger/iin_thermal 1500
     write /sys/class/hw_power/charger/direct_charger_sc/iin_thermal 1500
-    
-on property:ro.vendor.config.hw_vowifi=true
-    class_start vowifi
     
 on property:sys.shutdown.requested=*
     write sys/kernel/eas/boot_boost 1
