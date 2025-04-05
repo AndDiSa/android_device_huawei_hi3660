@@ -154,10 +154,6 @@ VENDOR_SECURITY_PATCH := 2022-07-05
 DEVICE_MANIFEST_FILE := $(COMMON_PATH)/prebuilts/manifest.xml
 DEVICE_MATRIX_FILE := $(COMMON_PATH)/prebuilts/compatibility_matrix.xml
 
-# VNDK
-PRODUCT_FULL_TREBLE_OVERRIDE := true
-PRODUCT_USE_VNDK_OVERRIDE := true
-
 # Vulkan
 TARGET_USES_VULKAN := true
 
