@@ -1,4 +1,0 @@
-type hal_hisi_connectivity, domain;
-type hal_hisi_connectivity_exec, exec_type, vendor_file_type, file_type;
-
-init_daemon_domain(hal_hisi_connectivity)

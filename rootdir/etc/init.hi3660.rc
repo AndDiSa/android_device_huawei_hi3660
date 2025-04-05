@@ -1393,18 +1393,6 @@ on property:sys.shutdown.requested=*
 on property:sys.boot_completed=1
     write /sys/kernel/rcc/event BOOT_COMPLETE
 
-service vendor.folio_daemon /system/bin/folio_daemon
-    class late_start
-    user system
-    group system uhid
-    disabled
-
-on property:init.svc.zygote=running
-    start vendor.folio_daemon
-
-on property:init.svc.zygote=stopped
-    stop vendor.folio_daemon
-    
 on property:sys.boot_completed=1
     swapon_all /vendor/etc/fstab.hi3660
     write /sys/devices/system/cpu/cpu0/cpufreq/scaling_governor interactive

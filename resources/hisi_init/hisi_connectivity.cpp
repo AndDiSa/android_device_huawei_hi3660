@@ -92,6 +92,7 @@ static int LoadChipProperties() {
     int ret = -1;
     std::string chip_type;
     std::string subchip_path;
+    std::string one = "1";
 
     // This is the main chip type, and it can be used to determine the hardware
     // revision. In our case, we can have either hisi or bcm.
@@ -102,7 +103,7 @@ static int LoadChipProperties() {
 
     // Set the property, so that the init scripts can be included conditionally.
     set_property(kPropChipType, chip_type);
-    set_property(kPropHisiChipType, "1");
+    set_property(kPropHisiChipType, one);
 
     // This is the subchip type, and it may be different depending on the hardware
     // revision. In our case, we can have either hi11xx or bcm43xx.

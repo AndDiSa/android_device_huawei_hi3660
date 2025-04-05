@@ -5,6 +5,7 @@
 #
 
 COMMON_PATH := device/huawei/hi3660
+COMPAT_PATH := device/huawei/compat
 
 # APEX
 OVERRIDE_TARGET_FLATTEN_APEX := true
@@ -61,7 +62,7 @@ BOARD_MKBOOTIMG_ARGS := --kernel_offset $(BOARD_KERNEL_OFFSET) --ramdisk_offset 
 
 BOARD_CUSTOM_BOOTIMG := true
 BOARD_CUSTOM_BOOTIMG_HAS_RAMDISK := false
-BOARD_CUSTOM_BOOTIMG_MK := $(COMMON_PATH)/resources/mkbootimg.mk
+BOARD_CUSTOM_BOOTIMG_MK := $(COMPAT_PATH)/mkbootimg.mk
 
 BOARD_KERNEL_IMAGE_NAME := Image.gz
 TARGET_KERNEL_SOURCE := kernel/huawei/hi3660
@@ -136,16 +137,14 @@ TARGET_RECOVERY_PIXEL_FORMAT := "BGRA_8888"
 BOARD_USES_FULL_RECOVERY_IMAGE := true
 
 # Releasetools
-TARGET_RELEASETOOLS_EXTENSIONS := $(COMMON_PATH)/resources/releasetools
+TARGET_RELEASETOOLS_EXTENSIONS := $(COMPAT_PATH)/releasetools
 
 # Root
 BOARD_ROOT_EXTRA_FOLDERS += \
     sec_storage
 
 # SEPolicy
-SELINUX_IGNORE_NEVERALLOWS := true
-BOARD_VENDOR_SEPOLICY_DIRS += $(COMMON_PATH)/sepolicy/vendor
-PRODUCT_PRIVATE_SEPOLICY_DIRS += $(COMMON_PATH)/sepolicy/private
+include device/huawei/compat/sepolicy/SEPolicy.mk
 
 # Vendor Security patch level
 VENDOR_SECURITY_PATCH := 2022-07-05

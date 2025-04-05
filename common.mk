@@ -175,7 +175,7 @@ PRODUCT_PACKAGES += \
 
 # Livedisplay
 PRODUCT_PACKAGES += \
-    vendor.lineage.livedisplay@2.1-service.hisi
+    vendor.lineage.livedisplay@2.1-service.huawei
 
 # Media
 PRODUCT_PACKAGES += \
@@ -299,7 +299,8 @@ PRODUCT_SOONG_NAMESPACES += \
     $(LOCAL_PATH) \
     hardware/google/interfaces \
     hardware/google/pixel \
-    $(LOCAL_PATH)/resources
+    $(LOCAL_PATH)/resources \
+    device/huawei/compat
 
 # Speed profile services and wifi-service to reduce RAM and storage
 PRODUCT_SYSTEM_SERVER_COMPILER_FILTER := speed-profile
@@ -316,7 +317,7 @@ PRODUCT_PACKAGES += \
 
 # Touch
 PRODUCT_PACKAGES += \
-    vendor.lineage.touch@1.0-service.hi3660
+    vendor.lineage.touch@1.0-service.huawei
 
 # Trust HAL
 PRODUCT_PACKAGES += \
