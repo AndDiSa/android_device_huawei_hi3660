@@ -49,9 +49,9 @@ on init
     chmod 0664 /sys/class/android_usb/android0/switch_request
 
     # f_fs
-    mkdir /dev/usb-ffs 0770 shell shell
-    mkdir /dev/usb-ffs/adb 0770 shell shell
-    mount functionfs adb /dev/usb-ffs/adb uid=2000,gid=2000
+    mkdir /dev/usb-ffs 0770 shell system
+    mkdir /dev/usb-ffs/adb
+    mount functionfs adb /dev/usb-ffs/adb uid=2000,gid=1000,rmode=0770,fmode=0660
 
     # set mtp device_type to Mobile Handset
     setprop sys.usb.mtp.device_type 3
