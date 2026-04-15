@@ -56,7 +56,7 @@ on init
     # set mtp device_type to Mobile Handset
     setprop sys.usb.mtp.device_type 3
     setprop sys.usb.configfs 1    
-    setprop persist.sys.usb.config manufacture,adb
+    #setprop persist.sys.usb.config manufacture,adb
     setprop sys.usb.controller ff100000.dwc3
 
 on post-fs-data && property:sys.usb.configfs=1

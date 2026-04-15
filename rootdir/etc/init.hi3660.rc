@@ -1278,7 +1278,7 @@ on charger
     chown system system /sys/devices/platform/huawei_batt_info/official
 
     setprop sys.usb.configfs 0
-    setprop persist.sys.usb.config mass_storage
+    #setprop persist.sys.usb.config mass_storage
     class_start charger
 
 on data_ready
