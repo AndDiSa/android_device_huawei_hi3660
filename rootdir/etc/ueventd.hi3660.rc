@@ -86,3 +86,5 @@
 
 /dev/pn544  					0660 nfc nfc
 /dev/cxd224x-i2c 				0660 nfc nfc
+
+firmware_directories /system/vendor/firmware/ /vendor/firmware/ /odm/etc/firmware/
