@@ -347,6 +347,25 @@ on post-fs-data
     mkdir /data/vendor/sec_storage_data_users 0700 system system
     restorecon /data/vendor/sec_storage_data_users
 
+    # ====================================================================
+    # FIXED: Restore structural and navigate permissions to physical keys
+    # ====================================================================
+    chown root system /sec_storage
+    chmod 0750 /sec_storage
+    
+    chown root system /sec_storage/authentication
+    chmod 0750 /sec_storage/authentication
+    
+    chown root system /sec_storage/storage_data
+    chmod 0750 /sec_storage/storage_data
+
+    # Ensure individual key blobs are readable by the system user group
+    chown root system /sec_storage/authentication/*
+    chmod 0640 /sec_storage/authentication/*
+    
+    chown root system /sec_storage/storage_data/*
+    chmod 0640 /sec_storage/storage_data/*
+
     chmod 0660 /dev/smartpakit
     chown media media /dev/smartpakit
 
@@ -1343,6 +1362,7 @@ service teecd /vendor/bin/teecd
     class early_hal
     user root
     group root system readproc
+    namespace mnt
 
 service oeminfo_nvm /vendor/bin/oeminfo_nvm_server
     class core
@@ -1358,6 +1378,7 @@ service vendor.hwcomposer-2-2 /vendor/bin/hw/android.hardware.graphics.composer@
     capabilities SYS_NICE
     onrestart restart surfaceflinger
     task_profiles HighPerformance
+    namespace mnt
     
 service vendor.keymaster-3-0 /vendor/bin/hw/android.hardware.keymaster@3.0-service
     override
@@ -1365,7 +1386,8 @@ service vendor.keymaster-3-0 /vendor/bin/hw/android.hardware.keymaster@3.0-servi
     class early_hal
     user system
     group system drmrpc
-    
+    namespace mnt
+
 service CameraDaemon /vendor/bin/CameraDaemon hi3660 ${ro.product.camera_product}
     class main
     user media
